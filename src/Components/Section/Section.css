@@ -1,0 +1,37 @@
+.section {
+  background-color: #f9f9f9;
+  border-radius: 14px;
+  display: flex;
+  padding: 110px 100px 110px 100px;
+  min-height: 80px;
+}
+
+.section_layout_columns {
+  flex-direction: row;
+}
+
+.section_layout_rows {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section__title {
+  /* font-family: 'Inter', Arial, Helvetica, sans-serif; */
+  font-family: Arial;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 43px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.placeholder {
+  width: 575px;
+  height: 324px;
+  border: brown 1px solid;
+  margin: 0;
+  bottom: 0;
+}
