@@ -1,2 +1,6 @@
-@import url('./Components/App/App.css');
-@import url('./Components/Section/Section.css');
+@import url('./components/App/App.css');
+@import url('./components/Section/Section.css');
+
+.main {
+  margin: 0;
+}
