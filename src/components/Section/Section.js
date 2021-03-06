@@ -6,10 +6,10 @@ function Section(props) {
       <h2 className="section__title">{props.title}</h2>
       {props.children}
       {/* delete placeholders */}
-      {props.layout === 'two-columns' ? (
-        <div className='placeholder_two-columns'></div>
+      {props.layout === 'vertical' ? (
+        <div className='placeholder_vertical'></div>
       ) : (
-        <div className='placeholder_four-columns'>
+        <div className='placeholder_horizontal'>
           <div className='placeholder__card'></div>
           <div className='placeholder__card'></div>
           <div className='placeholder__card'></div>

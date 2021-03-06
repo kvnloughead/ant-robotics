@@ -7,12 +7,12 @@
   box-sizing: content-box;
 }
 
-.section_layout_two-columns {
+.section_layout_vertical {
   flex-direction: row;
   min-height: 554px;
 }
 
-.section_layout_four-columns {
+.section_layout_horizontal {
   flex-direction: column;
   min-height: 500px;
 }
@@ -30,7 +30,7 @@
   padding: 0;
 }
 
-.placeholder_two-columns {
+.placeholder_vertical {
   width: 575px;
   height: 324px;
   background-color: brown;
@@ -39,7 +39,7 @@
   padding: 0;
 }
 
-.placeholder_four-columns {
+.placeholder_horizontal {
   width: 100%;
   height: 151px;
   margin: 0;
@@ -61,19 +61,19 @@
     /* will need to set other margins/padding on modifiers */
   }
 
-  .section_layout_two-columns {
+  .section_layout_vertical {
     flex-direction: column;
   }
 
-  .section_layout_four-columns {
+  .section_layout_horizontal {
     min-height: 767px;
   }
 
-  .placeholder_two-columns {
+  .placeholder_vertical {
     width: auto;
   }
 
-  .placeholder_four-columns {
+  .placeholder_horizontal {
     flex-wrap: wrap;
   }
 }
