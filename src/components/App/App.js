@@ -1,11 +1,13 @@
 import './App.css';
-import Section from '../Section/Section';
+import Button from '../Button/Button';
 import CardList from '../CardList/CardList';
+import Section from '../Section/Section';
 import { benefits } from '../../utils/config';
 
 function App() {
   return (
     <>
+      <Button label={'Sample Button'}/>
       <Section type='benefits' layout='four-columns' title='Benefits'>
         <CardList cards={benefits}></CardList>
       </Section>
