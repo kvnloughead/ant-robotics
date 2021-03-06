@@ -9,6 +9,8 @@ function App() {
       <Section type='benefits' layout='four-columns' title='Benefits'>
         <CardList cards={benefits}></CardList>
       </Section>
+      <Section type='products' layout='vertical' title='Wide choice of transport robots'></Section>
+      <Section type='benefits' layout='horizontal' title='Benefits'></Section>
     </>
   );
 }
