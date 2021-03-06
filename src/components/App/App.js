@@ -1,11 +1,14 @@
 import './App.css';
-import Section from '../Section/Section'
+import Section from '../Section/Section';
+import CardList from '../CardList/CardList';
+import { benefits } from '../../utils/config';
 
 function App() {
   return (
     <>
-      <Section type='products' layout='two-columns' title='Wide choice of transport robots'></Section>
-      <Section type='benefits' layout='four-columns' title='Benefits'></Section>
+      <Section type='benefits' layout='four-columns' title='Benefits'>
+        <CardList cards={benefits}></CardList>
+      </Section>
     </>
   );
 }
