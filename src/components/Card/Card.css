@@ -29,7 +29,7 @@
   color: #525252;
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1279.5px) {
   .card {
     margin: 0;
   }

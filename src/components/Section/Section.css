@@ -33,7 +33,7 @@
   }
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1279.5px) {
   .section {
     padding: 110px calc((100vw - 568px) / 2)
   }
