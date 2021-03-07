@@ -7,9 +7,8 @@ import { benefits } from '../../utils/config';
 function App() {
   return (
     <>
-      <Button label={'Sample Button'}/>
-      <Section type='benefits' layout='four-columns' title='Benefits'>
-        <CardList cards={benefits}></CardList>
+      <Section type='benefits' layout='horizontal' title='Benefits'>
+        <CardList cards={benefits} type='benefits'></CardList>
       </Section>
       <Section type='products' layout='vertical' title='Wide choice of transport robots'></Section>
       <Section type='benefits' layout='horizontal' title='Benefits'></Section>

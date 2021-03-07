@@ -1,0 +1,16 @@
+.card {
+  width: 235px;
+  margin: 0 40px 0 0;
+}
+
+.card:nth-of-type(4n) {
+  margin: 0;
+}
+
+.card__image_type_benefits {
+  width: 52px;
+  height: 52px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+}
