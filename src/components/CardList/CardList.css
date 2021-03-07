@@ -5,3 +5,27 @@
   padding: 0;
 }
 
+@media screen and (max-width: 1279px) {
+  .card-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-row-gap: 78px;
+    grid-column-gap: 90px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card-list {
+    grid-column-gap: calc(100vw * 78/768);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .card-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

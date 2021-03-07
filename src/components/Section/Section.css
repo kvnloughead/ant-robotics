@@ -26,11 +26,20 @@
   padding: 0 0 70px 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1281px) {
   .section {
-    padding: 110px 0 0 0;
-    /* will need to set other margins/padding on modifiers */
+    padding-right: calc((100vw - 1080px) / 2);
+    padding-left: calc((100vw - 1080px) / 2);
   }
+}
+
+@media screen and (max-width: 1279px) {
+  .section {
+    padding: 110px calc((100vw - 568px) / 2)
+  }
+}
+
+@media screen and (max-width: 768px) {
 
   .section_layout_vertical {
     flex-direction: column;
@@ -41,10 +50,10 @@
   }
 }
 
-@media screen and (max-width: 500px) {
-
-}
-
 @media screen and (max-width: 425px) {
-
+  .section__title {
+    margin: auto;
+    font-size: 28px;
+    line-height: 32px;
+  }
 }
