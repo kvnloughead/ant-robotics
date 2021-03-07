@@ -9,12 +9,10 @@
 
 .section_layout_vertical {
   flex-direction: row;
-  min-height: 554px;
 }
 
 .section_layout_horizontal {
   flex-direction: column;
-  min-height: 500px;
 }
 
 .section__title {
