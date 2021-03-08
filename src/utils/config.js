@@ -19,11 +19,6 @@ export const benefits = [
     title: "Incompatible Robots Team-Up",
     text: "Robots produced by tens of different vendors can collaborate in the same workspace.",
   },
-  { 
-    image: "./images/benefits-icon-numbers.svg",
-    title: "Incompatible Robots Team-Up",
-    text: "Robots produced by tens of different vendors can collaborate in the same workspace.",
-  }
 ];
 
 

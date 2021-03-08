@@ -10,8 +10,6 @@ function App() {
       <Section type='benefits' layout='horizontal' title='Benefits'>
         <CardList cards={benefits} type='benefits'/>
       </Section>
-      <Section type='products' layout='vertical' title='Wide choice of transport robots'/>
-      <Section type='benefits' layout='horizontal' title='Benefits'/>
     </>
   );
 }
