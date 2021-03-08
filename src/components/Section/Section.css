@@ -23,13 +23,13 @@
   letter-spacing: 0em;
   text-align: left;
   margin: 0;
-  padding: 0 0 70px 0;
+  padding: 0 0 70px;
 }
 
 @media screen and (min-width: 1281px) {
   .section {
-    padding-right: calc((100vw - 1080px) / 2);
-    padding-left: calc((100vw - 1080px) / 2);
+    padding-right: calc((100vw - 1108px) / 2);
+    padding-left: calc((100vw - 1108px) / 2);
   }
 }
 
