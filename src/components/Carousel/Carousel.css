@@ -6,6 +6,7 @@
     border-radius: 6px;
     position: absolute;
     right: 100px;
+    list-style: none;
 }
 
 .carousel-arrow_left {
