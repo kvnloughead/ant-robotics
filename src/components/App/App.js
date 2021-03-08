@@ -8,10 +8,10 @@ function App() {
   return (
     <>
       <Section type='benefits' layout='horizontal' title='Benefits'>
-        <CardList cards={benefits} type='benefits'></CardList>
+        <CardList cards={benefits} type='benefits'/>
       </Section>
-      <Section type='products' layout='vertical' title='Wide choice of transport robots'></Section>
-      <Section type='benefits' layout='horizontal' title='Benefits'></Section>
+      <Section type='products' layout='vertical' title='Wide choice of transport robots'/>
+      <Section type='benefits' layout='horizontal' title='Benefits'/>
     </>
   );
 }
