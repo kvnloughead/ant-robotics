@@ -7,7 +7,7 @@ function Form(props) {
   return (
     <>
     <form 
-      className='form form_visible'
+      className='form'
       id={`${props.modalType}-form`}
       name={`${props.modalType}Form`}
       action="#"
@@ -27,7 +27,7 @@ function Form(props) {
       role="button"
       aria-label="close-modal"
       tabIndex={0}
-      className='overlay overlay_visible'
+      className='overlay'
       onClick={props.closeModal}
       onKeyDown={props.closeModal}
       />
