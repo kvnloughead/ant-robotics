@@ -1,0 +1,67 @@
+.form {
+  background-color: #fff;
+  width: 384px;
+  height: 527px;
+  padding: 40px 30px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  position: sticky;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -263.5px;
+  margin-left: -192px;
+  z-index: 2;
+  visibility: hidden;
+  opacity:0;
+  transition: visibility 0s linear .5s, opacity .5s linear;
+}
+
+.form_visible {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.form__title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  align-self: center;
+  margin: 0 0 30px;
+}
+
+.form__close-button {
+  width: 14.14px;
+  height: 14.14px;
+  background-image: url('../../images/close-icon.svg');
+  background-color: transparent;
+  background-size: contain;
+  border: none;
+  position: absolute;
+  top: 21px;
+  right: 21px;
+  padding: 0;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, .5); 
+  visibility: hidden;
+  opacity:0;
+  transition:visibility 0s linear .5s, opacity .5s linear;
+}
+
+.overlay_visible {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}

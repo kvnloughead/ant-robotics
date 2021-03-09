@@ -1,22 +1,36 @@
 import './TextInput.css';
 
-function TextInput(props) {
+function TextInput({ title, type, required, handleInputFocus, handleChange }) {
   return (
     <>
-    <label className="form__input-label" htmlFor="name">
-        Name
+      <label className="text-input-label" htmlFor={type}>
+        {title}
       </label>
-      <input
-        className="form__input"
-        type="name"
-        id="name"
-        name="name"
-        required
-        autoComplete="on"
-        onFocus={props.handleInputFocus}
-        onBlur={props.handleInputFocus}
-        onChange={props.handleChange}
-      />
+      {type === 'textarea' ? (
+        <textarea
+          className="text-input text-input_type_text-area"
+          type={type}
+          id={type}
+          name={type}
+          required={required}
+          autoComplete="on"
+          onFocus={handleInputFocus}
+          onBlur={handleInputFocus}
+          onChange={handleChange}
+        />
+      ) : (
+        <input
+          className="text-input"
+          type={type}
+          id={type}
+          name={type}
+          required={required}
+          autoComplete="on"
+          onFocus={handleInputFocus}
+          onBlur={handleInputFocus}
+          onChange={handleChange}
+        />
+      )}
       </>
   );
 }

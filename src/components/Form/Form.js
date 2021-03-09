@@ -5,8 +5,9 @@ import TextInput from '../TextInput/TextInput';
 
 function Form(props) {
   return (
+    <>
     <form 
-      className='form'
+      className='form form_visible'
       id={`${props.modalType}-form`}
       name={`${props.modalType}Form`}
       action="#"
@@ -17,11 +18,20 @@ function Form(props) {
         type="button" 
         aria-label="close-modal"
         onClick={props.closeModal} />
-      <TextInput />
-      <TextInput />
-      <TextInput />
+      <TextInput type='name' title='Name' />
+      <TextInput type='email' title='Email*' required={true} />
+      <TextInput type='textarea' title='Message' />
       <Button />
     </form>
+    <div
+      role="button"
+      aria-label="close-modal"
+      tabIndex={0}
+      className='overlay overlay_visible'
+      onClick={props.closeModal}
+      onKeyDown={props.closeModal}
+      />
+    </>
   );
 }
 
