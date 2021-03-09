@@ -21,7 +21,7 @@ function Form(props) {
       <TextInput type='name' title='Name' />
       <TextInput type='email' title='Email*' required={true} />
       <TextInput type='textarea' title='Message' />
-      <Button />
+      <Button label={'Submit'} location='form' />
     </form>
     <div
       role="button"
