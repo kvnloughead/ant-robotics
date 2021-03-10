@@ -4,6 +4,7 @@ import CardList from '../CardList/CardList';
 import Carousel from '../Carousel/Carousel';
 import Section from '../Section/Section';
 import { benefits, products } from '../../utils/config';
+import Footer from '../Footer/Footer';
 
 function App() {
   return (
@@ -12,9 +13,10 @@ function App() {
       <Section type="benefits" layout="four-columns" title="Benefits">
         <CardList cards={benefits} />
       </Section>
-      <Section type='products' layout='vertical' title='Wide choice of transport robots'>
+      <Section type="products" layout="vertical" title="Wide choice of transport robots">
         <Carousel products={products} />
       </Section>
+      <Footer />
     </>
   );
 }
