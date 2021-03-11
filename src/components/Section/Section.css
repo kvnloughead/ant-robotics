@@ -28,9 +28,8 @@
 
 @media screen and (min-width: 1281px) {
   .section {
-    padding-right: calc((100vw - 1080px) / 2);
-    padding-left: calc((100vw - 1080px) / 2);
-    justify-content: center;
+    padding-right: calc((100vw - 1108px) / 2);
+    padding-left: calc((100vw - 1108px) / 2);
   }
 }
 

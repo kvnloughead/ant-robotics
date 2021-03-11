@@ -16,10 +16,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "fix":"yarn prettier && yarn lint:fix",
+    "fix": "yarn prettier && yarn lint:fix",
     "lint:fix": "./node_modules/eslint/bin/eslint.js --debug src/ --fix",
     "lint": "./node_modules/eslint/bin/eslint.js --debug src/",
-    "prettier":"./node_modules/prettier/bin-prettier.js --write \"src/**/*.js\""
+    "prettier": "./node_modules/prettier/bin-prettier.js --write \"src/**/*.js\""
   },
   "eslintConfig": {
     "extends": [
