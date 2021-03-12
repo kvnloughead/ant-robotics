@@ -17,7 +17,6 @@ function App() {
       <Section type='products' layout='vertical' title='Wide choice of transport robots'>
         <Carousel products={products} />
       </Section>
-      <Section type='benefits' layout='horizontal' title='Benefits'></Section>
     </>
   );
 }
