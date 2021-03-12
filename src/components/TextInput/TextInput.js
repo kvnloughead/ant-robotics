@@ -31,7 +31,7 @@ function TextInput({ title, type, required, handleInputFocus, handleChange }) {
           onChange={handleChange}
         />
       )}
-      </>
+    </>
   );
 }
 
