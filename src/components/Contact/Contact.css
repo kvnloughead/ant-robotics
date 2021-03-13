@@ -1,0 +1,17 @@
+.contact {
+    margin-top: 12px;
+}
+
+.contact:first-child {
+    margin-top: 50px;
+}
+
+.contact:last-child {
+    text-decoration: underline;
+    color: #000000;
+}
+
+.contact__link {
+    text-decoration: none;
+    color: #000000;
+}
