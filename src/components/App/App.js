@@ -2,7 +2,9 @@ import './App.css';
 import CardList from '../CardList/CardList';
 import Carousel from '../Carousel/Carousel';
 import Section from '../Section/Section';
-import { benefits, cardsWithImages, products } from '../../utils/config';
+import { benefits } from '../../config/benefits';
+import { cardsWithImages } from '../../config/cards-with-images';
+import { products } from '../../config/products';
 
 function App() {
   return (
