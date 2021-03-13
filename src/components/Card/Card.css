@@ -1,6 +1,13 @@
 .card {
   width: 235px;
   margin: 0 40px 0 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card_type_benefits {
+  align-items: end;
 }
 
 .card:nth-of-type(4n) {
@@ -24,6 +31,16 @@
   background-position: center;
 }
 
+.card__image_type_team {
+  width: 90px;
+  height: 90px;
+  box-shadow: 0px 4px 40px rgb(0 0 0 / 4%);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+
 .card__title {
   font-size: 16px;
   font-weight: 600;
@@ -36,10 +53,21 @@
   margin: 30px 0 18px 0;
 }
 
+.card__title_type_team {
+  margin: 30px 0 4px 0;
+}
+
 .card__title_type_cards-with-images {
   text-align: center;
   min-height: 38px;
   margin: 26px 0 22px;
+}
+
+.card__job {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 0 15px 0;
 }
 
 .card__text {
@@ -48,6 +76,12 @@
   line-height: 16px;
   color: #525252;
   margin: 0;
+  text-align: center;
+  min-height: 80px;
+}
+
+.card__text_type_benefits {
+  text-align: left;
 }
 
 .card__text_emphatic {
