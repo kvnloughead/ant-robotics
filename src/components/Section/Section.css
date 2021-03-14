@@ -45,7 +45,11 @@
 
 @media screen and (max-width: 1279.5px) {
   .section {
-    padding: 110px calc((100vw - 568px) / 2)
+    padding: 110px calc((100vw - 568px) / 2);
+  }
+
+  .section_type_team {
+    padding: 110px calc((100vw - 530px) / 2);
   }
 }
 

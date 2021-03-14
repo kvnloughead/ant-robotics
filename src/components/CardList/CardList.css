@@ -15,6 +15,10 @@
     grid-row-gap: 90px;
     grid-column-gap: 78px;
   }
+  
+  .card-list_type_team {
+    grid-column-gap: calc(100vw * 30/768);
+  }
 
   .card-list_type_cards-with-images {
     grid-row-gap: 70px;
