@@ -7,7 +7,13 @@ function Gallery() {
 
   const handleArrowClick = (evt) => {
     const isLeftArrow = evt.currentTarget.classList.contains('arrow-button_left');
-    setCurrentIndex(currentIndex + isLeftArrow ? -1 : 1);
+    const newIndex = currentIndex + (isLeftArrow ? -1 : 1);
+    if (newIndex <= galleryItems.length - 1) {
+      setCurrentIndex(newIndex < 0 ? 0 : newIndex);
+    }
+    // if (newIndex < 0) setCurrentIndex(0);
+    // if (newIndex >= galleryItems.length) setCurrentIndex(galleryItems.length - 1);
+    // setCurrentIndex(currentIndex + (isLeftArrow ? -1 : 1));
   };
 
   return (
