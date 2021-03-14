@@ -7,6 +7,10 @@
   box-sizing: content-box;
 }
 
+.section_type_gallery {
+  padding-bottom: 100px;
+}
+
 .section_layout_vertical {
   flex-direction: row;
   min-height: 554px;
@@ -14,7 +18,6 @@
 
 .section_layout_horizontal {
   flex-direction: column;
-  min-height: 500px;
 }
 
 .section__title {
@@ -26,6 +29,11 @@
   text-align: left;
   margin: 0;
   padding: 0;
+}
+
+.section__title_type_gallery {
+  align-self: center;
+  margin-bottom: 50px;
 }
 
 .placeholder_vertical {

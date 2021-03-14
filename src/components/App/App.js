@@ -1,20 +1,19 @@
 import './App.css';
-import Button from '../Button/Button';
-import CardList from '../CardList/CardList';
 import Carousel from '../Carousel/Carousel';
 import Section from '../Section/Section';
-import { benefits, products } from '../../utils/config';
+import Gallery from '../Gallery/Gallery';
+import { products } from '../../utils/config';
+import { galleryItems } from '../../config/gallery';
 import Footer from '../Footer/Footer';
 
 function App() {
   return (
     <>
-      <Button label="Sample Button" />
-      <Section type="benefits" layout="four-columns" title="Benefits">
-        <CardList cards={benefits} />
-      </Section>
       <Section type="products" layout="vertical" title="Wide choice of transport robots">
         <Carousel products={products} />
+      </Section>
+      <Section type="gallery" layout="horizontal" title="Gallery">
+        <Gallery products={galleryItems} />
       </Section>
       <Footer />
     </>
