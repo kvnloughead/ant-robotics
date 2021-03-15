@@ -11,9 +11,6 @@ function Gallery() {
     if (newIndex <= galleryItems.length - 1) {
       setCurrentIndex(newIndex < 0 ? 0 : newIndex);
     }
-    // if (newIndex < 0) setCurrentIndex(0);
-    // if (newIndex >= galleryItems.length) setCurrentIndex(galleryItems.length - 1);
-    // setCurrentIndex(currentIndex + (isLeftArrow ? -1 : 1));
   };
 
   return (
@@ -40,12 +37,6 @@ function Gallery() {
         </div>
         <figcaption className="gallery__text">{galleryItems[currentIndex].text}</figcaption>
       </figure>
-      {/* {galleryItems.map((item) => (
-        <figure>
-          <img src={item.image} alt={item.text} />
-          <figcaption>{item.text}</figcaption>
-        </figure>
-      ))} */}
     </>
   );
 }
