@@ -3,10 +3,11 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { sectionTitles } from '../../config/section-titles';
 import Contact from '../Contact/Contact';
 import { contacts, copyright, address } from '../../config/contacts';
+import { htmlIds } from '../../config/nav-link';
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" id={htmlIds.contactsId}>
       <div className="footer__content">
         <h2 className="footer__title">{sectionTitles.footer}</h2>
         <div className="footer__columns">

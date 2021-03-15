@@ -1,0 +1,49 @@
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    background: #393939;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 6px;
+    padding: 17px;
+    /* position: fixed;
+    top: 0;
+    max-width: 1080px;
+    margin: auto;
+    margin-top: 30px;
+    z-index: 1001; */
+}
+
+.header-nav__brand {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: -0.04em;
+    margin: 0;
+    margin-right: auto;
+    padding: 0;
+}
+
+.header-nav__links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 14px;
+}
+
+.header-nav__social {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+}
