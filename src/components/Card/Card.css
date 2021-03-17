@@ -6,10 +6,6 @@
   flex-direction: column;
 }
 
-.card_type_benefits {
-  align-items: end;
-}
-
 .card:nth-of-type(4n) {
   margin: 0;
 }
@@ -101,6 +97,12 @@
 @media screen and (max-width: 767px) {
   .card {
     width: auto;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .card_type_benefits {
+    align-items: end;
   }
 }
 
