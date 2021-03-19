@@ -1,20 +1,30 @@
 import './App.css';
-import Button from '../Button/Button';
 import CardList from '../CardList/CardList';
 import Carousel from '../Carousel/Carousel';
 import Section from '../Section/Section';
-import { benefits, products } from '../../utils/config';
 import Footer from '../Footer/Footer';
+import { benefits } from '../../config/benefits';
+import { cardsWithImages } from '../../config/cards-with-images';
+import { products } from '../../config/products';
+import { team } from '../../config/team';
 
 function App() {
   return (
     <>
-      <Button label="Sample Button" />
-      <Section type="benefits" layout="four-columns" title="Benefits">
-        <CardList cards={benefits} />
-      </Section>
       <Section type="products" layout="vertical" title="Wide choice of transport robots">
         <Carousel products={products} />
+      </Section>
+      <Section type="products" layout="vertical">
+        <Carousel products={products} />
+      </Section>
+      <Section type="benefits" layout="horizontal">
+        <CardList cards={benefits} type="benefits" />
+      </Section>
+      <Section type="cards-with-images" layout="horizontal">
+        <CardList cards={cardsWithImages} type="cards-with-images" />
+      </Section>
+      <Section type="team" layout="horizontal">
+        <CardList cards={team} type="team" />
       </Section>
       <Footer />
     </>
