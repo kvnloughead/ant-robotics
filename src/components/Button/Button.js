@@ -1,6 +1,6 @@
 import './Button.css';
 
-function Button(props) {
+function Button({ label, onClick }) {
   return (
     <button
       type="button"

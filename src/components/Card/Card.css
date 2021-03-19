@@ -1,0 +1,125 @@
+.card {
+  width: 235px;
+  margin: 0 40px 0 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card:nth-of-type(4n) {
+  margin: 0;
+}
+
+.card__image_type_benefits {
+  width: 52px;
+  height: 52px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 6px;
+}
+
+.card__image_type_cards-with-images {
+  height: 235px;
+  width: 235px;
+  border-radius: 6px;
+  background-position: center;
+}
+
+.card__image_type_team {
+  width: 90px;
+  height: 90px;
+  box-shadow: 0px 4px 40px rgb(0 0 0 / 4%);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.card__title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: -0.04em;
+  max-width: 280px;
+}
+
+.card__title_type_benefits {
+  margin: 30px 0 18px 0;
+}
+
+.card__title_type_team {
+  margin: 30px 0 4px 0;
+}
+
+.card__title_type_cards-with-images {
+  text-align: center;
+  min-height: 38px;
+  margin: 26px 0 22px;
+}
+
+.card__job {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 0 15px 0;
+}
+
+.card__text {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #525252;
+  margin: 0;
+  text-align: center;
+  min-height: 80px;
+}
+
+.card__text_type_benefits {
+  text-align: left;
+}
+
+.card__text_emphatic {
+  font-weight: 600;
+}
+
+.card__text_type_cards-with-images {
+  text-align: center;
+}
+
+@media screen and (max-width: 1279.5px) {
+  .card {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .card_type_benefits {
+    align-items: end;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    max-width: 280px;
+  }
+
+  .card__image {
+    margin: auto;
+  }
+
+  .card__title {
+    text-align: center;
+  }
+
+  .card__text {
+    text-align: center;
+  }
+}

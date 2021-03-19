@@ -2,8 +2,9 @@
 @import url('./vendor/fonts/fonts.css');
 @import url('./components/App/App.css');
 @import url('./components/Section/Section.css');
+@import url('./components/Footer/Footer.css');
 
 .main {
   margin: 0;
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
 }
