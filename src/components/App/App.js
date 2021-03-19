@@ -1,5 +1,6 @@
 import './App.css';
 import CardList from '../CardList/CardList';
+import Form from '../Form/Form';
 import Carousel from '../Carousel/Carousel';
 import Section from '../Section/Section';
 import Footer from '../Footer/Footer';
@@ -11,9 +12,7 @@ import { team } from '../../config/team';
 function App() {
   return (
     <>
-      <Section type="products" layout="vertical" title="Wide choice of transport robots">
-        <Carousel products={products} />
-      </Section>
+      <Form />
       <Section type="products" layout="vertical">
         <Carousel products={products} />
       </Section>
