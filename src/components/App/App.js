@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import Carousel from '../Carousel/Carousel';
 import Section from '../Section/Section';
 import Gallery from '../Gallery/Gallery';
@@ -15,22 +15,55 @@ import Banner from '../Banner/Banner';
 
 function App() {
   const [formIsOpen, setFormIsOpen] = useState(false);
+  const [values, setValues] = useState({});
+  const [errors, setErrors] = useState({});
+  const [isValid, setIsValid] = useState(false);
 
   const openModal = () => {
     setFormIsOpen(true);
   };
 
-  const closeModal = () => {
-    setFormIsOpen(false);
+  const resetForm = useCallback(
+    (newValues = { email: '', password: '', message: '' }, newErrors = {}, newIsValid = false) => {
+      setValues(newValues);
+      setErrors(newErrors);
+      setIsValid(newIsValid);
+    },
+    [setValues, setErrors, setIsValid]
+  );
+
+  const closeModal = (evt) => {
+    evt.stopPropagation();
+    if (evt.type === 'click' || evt.key === 'Escape') {
+      setFormIsOpen(false);
+      resetForm();
+    }
   };
 
   const handleSubmit = () => {
     setFormIsOpen(false);
   };
 
+  const handleChange = (event) => {
+    const { target } = event;
+    const { name } = target;
+    const { value } = target;
+    setValues({ ...values, [name]: value });
+    setErrors({ ...errors, [name]: target.validationMessage });
+    setIsValid(target.closest('form').checkValidity());
+  };
+
   return (
     <>
-      <Form isOpen={formIsOpen} onClose={closeModal} onSubmit={handleSubmit} />
+      <Form
+        isOpen={formIsOpen}
+        isValid={isValid}
+        onClose={closeModal}
+        onSubmit={handleSubmit}
+        handleChange={handleChange}
+        errors={errors}
+        values={values}
+      />
       <Section type="products" layout="vertical">
         <Carousel products={products} />
       </Section>

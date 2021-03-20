@@ -1,9 +1,16 @@
+import { useEffect } from 'react';
 import './Form.css';
 
 import Button from '../Button/Button';
 import TextInput from '../TextInput/TextInput';
 
-function Form({ modalType, onClose, isOpen }) {
+function Form({ modalType, onClose, isOpen, isValid, handleChange, errors, values }) {
+  useEffect(() => {
+    document.addEventListener('keydown', onClose);
+    return () => {
+      document.removeEventListener('keydown', onClose);
+    };
+  });
   return (
     <>
       <form
@@ -14,11 +21,17 @@ function Form({ modalType, onClose, isOpen }) {
         noValidate
       >
         <h2 className="form__title">Write us</h2>
-        <button className="form__close-button" type="button" aria-label="close-modal" onClick={onClose} />
-        <TextInput type="name" title="Name" />
-        <TextInput type="email" title="Email*" required />
-        <TextInput type="textarea" title="Message" />
-        <Button label="Submit" location="form" />
+        <button
+          className="form__close-button clickable"
+          type="button"
+          aria-label="close-modal"
+          onClick={onClose}
+          isValid={isValid}
+        />
+        <TextInput values={values} errors={errors} type="name" title="Name" required onChange={handleChange} />
+        <TextInput values={values} errors={errors} type="email" title="Email*" required onChange={handleChange} />
+        <TextInput values={values} errors={errors} type="message" title="Message" required onChange={handleChange} />
+        <Button onClick={onClose} label="Submit" location="form" isValid={isValid} />
       </form>
       <div
         role="button"

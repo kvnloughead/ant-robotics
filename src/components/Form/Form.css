@@ -8,22 +8,22 @@
   display: flex;
   flex-direction: column;
   justify-content: left;
-  position: sticky;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   margin-top: -263.5px;
   margin-left: -192px;
-  z-index: 2;
+  z-index: 1001;
   visibility: hidden;
   opacity:0;
-  transition: visibility 0s linear .5s, opacity .5s linear;
+  transition: visibility 0s linear .5s, opacity .5s linear, z-index .5s linear;
 }
 
 .form_visible {
   visibility: visible;
   opacity: 1;
   transition-delay: 0s;
+  z-index: 10001;
 }
 
 .form__title {
@@ -31,7 +31,7 @@
   font-weight: 700;
   line-height: 34px;
   align-self: center;
-  margin: 0 0 10px;
+  margin: 0 0 30px;
 }
 
 .form__close-button {
@@ -57,17 +57,18 @@
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
   background-color: rgba(0, 0, 0, .5); 
   visibility: hidden;
   opacity:0;
-  transition:visibility 0s linear .5s, opacity .5s linear;
+  z-index: 1000;
+  transition: visibility 0s linear .5s, opacity .5s linear, z-index .5s linear;
 }
 
 .overlay_visible {
   visibility: visible;
   opacity: 1;
   transition-delay: 0s;
+  z-index: 10000;
 }
 
 @media screen and (max-width: 425px) { 
