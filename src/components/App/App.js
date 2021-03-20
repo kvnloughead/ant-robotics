@@ -1,18 +1,23 @@
 import './App.css';
-import CardList from '../CardList/CardList';
-import Form from '../Form/Form';
 import Carousel from '../Carousel/Carousel';
 import Section from '../Section/Section';
+import Gallery from '../Gallery/Gallery';
+import { products } from '../../utils/config';
+import { galleryItems } from '../../config/gallery';
+import CardList from '../CardList/CardList';
+import Form from '../Form/Form';
 import Footer from '../Footer/Footer';
 import { benefits } from '../../config/benefits';
 import { cardsWithImages } from '../../config/cards-with-images';
-import { products } from '../../config/products';
 import { team } from '../../config/team';
 
 function App() {
   return (
     <>
       <Form />
+      <Section type="gallery" layout="horizontal" title="Gallery">
+        <Gallery products={galleryItems} />
+      </Section>
       <Section type="products" layout="vertical">
         <Carousel products={products} />
       </Section>

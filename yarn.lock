@@ -9220,7 +9220,6 @@
   "version" "11.0.3"
   dependencies:
     "@babel/code-frame" "7.10.4"
-<<<<<<< HEAD
     address "1.1.2"
     browserslist "4.14.2"
     chalk "2.4.2"
@@ -9285,7 +9284,6 @@ react-scripts@4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-4.0.3.tgz#b1cafed7c3fa603e7628ba0f187787964cb5d345"
   integrity sha512-S5eO4vjUzUisvkIPB7jVsKtuH2HhWcASREYWHAQ1FP5HyCv3xgn+wpILAEWkmy+A+tTNbSZClhxjT3qz6g4L1A==
-=======
     "address" "1.1.2"
     "browserslist" "4.14.2"
     "chalk" "2.4.2"
@@ -9343,7 +9341,6 @@ react-scripts@4.0.3:
   "integrity" "sha512-S5eO4vjUzUisvkIPB7jVsKtuH2HhWcASREYWHAQ1FP5HyCv3xgn+wpILAEWkmy+A+tTNbSZClhxjT3qz6g4L1A=="
   "resolved" "https://registry.yarnpkg.com/react-scripts/-/react-scripts-4.0.3.tgz"
   "version" "4.0.3"
->>>>>>> feat/CardsWithImages
   dependencies:
     "@babel/core" "7.12.3"
     "@pmmmwh/react-refresh-webpack-plugin" "0.4.3"
