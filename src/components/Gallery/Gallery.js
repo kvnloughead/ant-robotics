@@ -18,7 +18,7 @@ function Gallery() {
       <figure className="gallery">
         <div className="gallery__carousel">
           <button
-            className="arrow-button arrow-button_left"
+            className="arrow-button arrow-button_left clickable"
             type="button"
             aria-label="previous-image"
             onClick={handleArrowClick}
@@ -29,7 +29,7 @@ function Gallery() {
             alt={galleryItems[currentIndex].text}
           />
           <button
-            className="arrow-button arrow-button_right"
+            className="arrow-button arrow-button_right clickable"
             type="button"
             aria-label="next-image"
             onClick={handleArrowClick}

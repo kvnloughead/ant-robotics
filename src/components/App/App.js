@@ -15,14 +15,14 @@ function App() {
   return (
     <>
       <Form />
-      <Section type="gallery" layout="horizontal" title="Gallery">
-        <Gallery products={galleryItems} />
-      </Section>
       <Section type="products" layout="vertical">
         <Carousel products={products} />
       </Section>
       <Section type="benefits" layout="horizontal">
         <CardList cards={benefits} type="benefits" />
+      </Section>
+      <Section type="gallery" layout="horizontal" title="Gallery">
+        <Gallery products={galleryItems} />
       </Section>
       <Section type="cards-with-images" layout="horizontal">
         <CardList cards={cardsWithImages} type="cards-with-images" />
