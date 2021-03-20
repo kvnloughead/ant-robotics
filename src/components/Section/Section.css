@@ -13,11 +13,11 @@
 
 .section_layout_vertical {
   flex-direction: row;
-  min-height: 554px;
 }
 
 .section_layout_horizontal {
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .section__title {
@@ -27,8 +27,9 @@
   line-height: 43px;
   letter-spacing: 0em;
   text-align: left;
-  margin: 0;
+  margin: 0 0 90px;
   padding: 0;
+  max-width: 480px;
 }
 
 .section__title_type_gallery {
@@ -36,10 +37,32 @@
   margin-bottom: 50px;
 }
 
-@media screen and (max-width: 768px) {
+.section__title_type_benefits {
+  margin: 0 0 70px;
+}
+
+.section__title_type_team {
+  align-self: center;
+}
+
+@media screen and (min-width: 1281px) {
   .section {
-    padding: 110px 0 0 0;
+    padding-right: calc((100vw - 1108px) / 2);
+    padding-left: calc((100vw - 1108px) / 2);
   }
+}
+
+@media screen and (max-width: 1279.5px) {
+  .section {
+    padding: 110px calc((100vw - 568px) / 2);
+  }
+
+  .section_type_team {
+    padding: 110px calc((100vw - 530px) / 2);
+  }
+}
+
+@media screen and (max-width: 768px) {
 
   .section_layout_vertical {
     flex-direction: column;
@@ -52,10 +75,28 @@
     padding-bottom: 92px;
   }
 
+  .section_layout_horizontal {
+    min-height: 767px;
+  }
+
+  .section__title_type_benefits {
+    margin-bottom: 82px;
+  }
+
   .section__title_type_gallery {
     font-size: 28px;
     line-height: 32px;
     margin-bottom: 42px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section__title {
+    margin: auto;
+    margin-bottom: 82px;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
   }
 }
 
