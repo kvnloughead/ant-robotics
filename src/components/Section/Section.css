@@ -47,18 +47,21 @@
 
 @media screen and (min-width: 1281px) {
   .section {
-    padding-right: calc((100vw - 1108px) / 2);
-    padding-left: calc((100vw - 1108px) / 2);
+    max-width: 1080px;
+    margin: auto;
+    box-sizing: content-box;
   }
 }
 
-@media screen and (max-width: 1279.5px) {
+@media screen and (max-width: 1024px) {
   .section {
-    padding: 110px calc((100vw - 568px) / 2);
+    max-width: 548px;
+    margin: auto;
   }
 
   .section_type_team {
-    padding: 110px calc((100vw - 530px) / 2);
+    max-width: 510px;
+    margin: auto;
   }
 }
 

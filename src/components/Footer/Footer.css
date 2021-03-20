@@ -89,3 +89,10 @@
         margin-top: 32px;
     }
 }
+
+@media screen and (min-width: 1281px) {
+    .footer {
+        max-width: 1080px;
+        margin: auto;
+    }
+}
