@@ -52,6 +52,7 @@
     margin-top: -43px;
     overflow: hidden;
     box-sizing: border-box;
+    z-index: 0;
 }
 
 @media screen and (min-width: 1281px) {
