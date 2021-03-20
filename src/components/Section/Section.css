@@ -53,20 +53,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .section {
-    max-width: 548px;
-    margin: auto;
-  }
-
-  .section_type_team {
-    max-width: 510px;
-    margin: auto;
-  }
-}
-
 @media screen and (max-width: 768px) {
-
   .section_layout_vertical {
     flex-direction: column;
   }

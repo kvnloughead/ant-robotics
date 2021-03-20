@@ -10,6 +10,7 @@ import Footer from '../Footer/Footer';
 import { benefits } from '../../config/benefits';
 import { cardsWithImages } from '../../config/cards-with-images';
 import { team } from '../../config/team';
+import Banner from '../Banner/Banner';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       <Section type="team" layout="horizontal">
         <CardList cards={team} type="team" />
       </Section>
+      <Banner />
       <Footer />
     </>
   );

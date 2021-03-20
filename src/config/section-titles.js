@@ -4,6 +4,6 @@ export const sectionTitles = {
   gallery: 'Gallery',
   'cards-with-images': 'Customers benefit despite of the automation level',
   team: 'Team',
-  splash: 'Want to work with us?',
+  banner: 'Want to work with us?',
   footer: 'Contacts',
 };
