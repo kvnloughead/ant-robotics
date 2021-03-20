@@ -9,18 +9,18 @@ export const team = [
     title: 'Vladimir Sokolenko',
     job: 'CTO',
     text: 'Hardware and robotics guru, 20+ years team lead experience. Co-founded two tech startups.',
-    image: '',
+    image: './images/team/max.png',
   },
   {
     title: 'Alexander Sambuk',
     job: 'CBDO',
     text: 'Entrepreneur and top-notch operational lead with a background in corporate business and startups.',
-    image: '',
+    image: './images/team/max.png',
   },
   {
     title: 'Ilya Shimchik',
     job: 'Advisor, AI and Computer Vision',
     text: 'Computer Vision and AI guru, MS Software Engineering (CMU). Head of Acronis SIT Autonomous Team, Roborace',
-    image: '',
+    image: './images/team/max.png',
   },
 ];

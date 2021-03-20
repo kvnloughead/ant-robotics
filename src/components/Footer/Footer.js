@@ -1,12 +1,13 @@
 import './Footer.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { sectionTitles } from '../../config/section-titles';
 import Contact from '../Contact/Contact';
-import { contacts, copyright, title, address } from '../../utils/config';
+import { contacts, copyright, address } from '../../config/contacts';
 
 function Footer() {
   return (
     <footer className="footer">
-      <h2 className="footer__title">{title}</h2>
+      <h2 className="footer__title">{sectionTitles.footer}</h2>
       <div className="footer__columns">
         <ul className="footer__contacts">
           {contacts.map((contact) => (

@@ -2,7 +2,7 @@ import './App.css';
 import Carousel from '../Carousel/Carousel';
 import Section from '../Section/Section';
 import Gallery from '../Gallery/Gallery';
-import { products } from '../../utils/config';
+import { products } from '../../config/products';
 import { galleryItems } from '../../config/gallery';
 import CardList from '../CardList/CardList';
 import Form from '../Form/Form';
@@ -21,7 +21,7 @@ function App() {
       <Section type="benefits" layout="horizontal">
         <CardList cards={benefits} type="benefits" />
       </Section>
-      <Section type="gallery" layout="horizontal" title="Gallery">
+      <Section type="gallery" layout="horizontal">
         <Gallery products={galleryItems} />
       </Section>
       <Section type="cards-with-images" layout="horizontal">
