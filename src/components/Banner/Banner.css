@@ -1,10 +1,13 @@
 .banner {
   background: #F9F9F9;
   border-radius: 14px;
-  display: flex;
-  justify-content: space-between;
   padding: 20px 100px;
   margin: 10px;
+}
+
+.banner__content {
+  display: flex;
+  justify-content: space-between;
 }
 
 .banner__title {
@@ -12,6 +15,13 @@
   font-weight: 600;
   line-height: 40px;
   margin: 0;
+}
+
+@media screen and (min-width: 1281px) {
+  .banner__content {
+    max-width: 1060px;
+    margin: auto;
+  }
 }
 
 @media screen and (max-width: 1200px) {

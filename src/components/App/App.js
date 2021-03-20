@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import Carousel from '../Carousel/Carousel';
 import Section from '../Section/Section';
 import Gallery from '../Gallery/Gallery';
@@ -13,9 +14,23 @@ import { team } from '../../config/team';
 import Banner from '../Banner/Banner';
 
 function App() {
+  const [formIsOpen, setFormIsOpen] = useState(false);
+
+  const openModal = () => {
+    setFormIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setFormIsOpen(false);
+  };
+
+  const handleSubmit = () => {
+    setFormIsOpen(false);
+  };
+
   return (
     <>
-      <Form />
+      <Form isOpen={formIsOpen} onClose={closeModal} onSubmit={handleSubmit} />
       <Section type="products" layout="vertical">
         <Carousel products={products} />
       </Section>
@@ -31,7 +46,7 @@ function App() {
       <Section type="team" layout="horizontal">
         <CardList cards={team} type="team" />
       </Section>
-      <Banner />
+      <Banner onClick={openModal} />
       <Footer />
     </>
   );

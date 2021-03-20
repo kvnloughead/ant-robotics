@@ -1,11 +1,14 @@
 .footer {
     background-color: #f9f9f9;
     border-radius: 14px;
-    display: flex;
-    flex-direction: column;
     padding: 110px 100px 110px 100px;
     margin: 10px;
     box-sizing: content-box;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
 }
 
 .footer__title {
@@ -51,6 +54,14 @@
     box-sizing: border-box;
 }
 
+@media screen and (min-width: 1281px) {
+    .footer__content {
+        max-width: 1060px;
+        margin: auto;
+        
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .footer {
       padding: 110px 40px 120px 40px;
@@ -87,12 +98,5 @@
 
     .footer__copyright {
         margin-top: 32px;
-    }
-}
-
-@media screen and (min-width: 1281px) {
-    .footer {
-        max-width: 1080px;
-        margin: auto;
     }
 }
