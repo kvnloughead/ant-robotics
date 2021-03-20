@@ -72,4 +72,3 @@ export const contacts = [
 
 export const copyright = '© ANT Robotics, 2020.';
 export const title = 'Contacts';
-

@@ -1,14 +1,9 @@
 import './Button.css';
 
-function Button({ label, onClick }) {
+function Button({ label, onClick, style, location }) {
   return (
-    <button
-      type="button"
-      className={`button button_location_${props.location}`}
-      onClick={props.onClick}
-      style={props.style}
-    >
-      {props.label}
+    <button type="button" className={`button button_location_${location}`} onClick={onClick} style={style}>
+      {label}
     </button>
   );
 }
