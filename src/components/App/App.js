@@ -1,8 +1,9 @@
 import './App.css';
+import { useState, useCallback } from 'react';
 import Carousel from '../Carousel/Carousel';
 import Section from '../Section/Section';
 import Gallery from '../Gallery/Gallery';
-import { products } from '../../utils/config';
+import { products } from '../../config/products';
 import { galleryItems } from '../../config/gallery';
 import CardList from '../CardList/CardList';
 import Form from '../Form/Form';
@@ -10,19 +11,67 @@ import Footer from '../Footer/Footer';
 import { benefits } from '../../config/benefits';
 import { cardsWithImages } from '../../config/cards-with-images';
 import { team } from '../../config/team';
+import Banner from '../Banner/Banner';
 
 function App() {
+  const [formIsOpen, setFormIsOpen] = useState(false);
+  const [values, setValues] = useState({});
+  const [errors, setErrors] = useState({});
+  const [isValid, setIsValid] = useState(false);
+
+  const openModal = () => {
+    setFormIsOpen(true);
+  };
+
+  const resetForm = useCallback(
+    (newValues = { email: '', password: '', message: '' }, newErrors = {}, newIsValid = false) => {
+      setValues(newValues);
+      setErrors(newErrors);
+      setIsValid(newIsValid);
+    },
+    [setValues, setErrors, setIsValid]
+  );
+
+  const closeModal = (evt) => {
+    evt.stopPropagation();
+    if (evt.type === 'click' || evt.key === 'Escape') {
+      setFormIsOpen(false);
+      resetForm();
+    }
+  };
+
+  const handleSubmit = () => {
+    setFormIsOpen(false);
+  };
+
+  const handleChange = (event) => {
+    const { target } = event;
+    const { name } = target;
+    const { value } = target;
+    setValues({ ...values, [name]: value });
+    setErrors({ ...errors, [name]: target.validationMessage });
+    setIsValid(target.closest('form').checkValidity());
+  };
+
   return (
     <>
-      <Form />
-      <Section type="gallery" layout="horizontal" title="Gallery">
-        <Gallery products={galleryItems} />
-      </Section>
+      <Form
+        isOpen={formIsOpen}
+        isValid={isValid}
+        onClose={closeModal}
+        onSubmit={handleSubmit}
+        handleChange={handleChange}
+        errors={errors}
+        values={values}
+      />
       <Section type="products" layout="vertical">
         <Carousel products={products} />
       </Section>
       <Section type="benefits" layout="horizontal">
         <CardList cards={benefits} type="benefits" />
+      </Section>
+      <Section type="gallery" layout="horizontal">
+        <Gallery products={galleryItems} />
       </Section>
       <Section type="cards-with-images" layout="horizontal">
         <CardList cards={cardsWithImages} type="cards-with-images" />
@@ -30,6 +79,7 @@ function App() {
       <Section type="team" layout="horizontal">
         <CardList cards={team} type="team" />
       </Section>
+      <Banner onClick={openModal} />
       <Footer />
     </>
   );

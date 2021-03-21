@@ -1,10 +1,14 @@
 .section {
   background-color: #f9f9f9;
   border-radius: 14px;
-  display: flex;
   padding: 110px 100px 110px 100px;
   margin: 10px;
   box-sizing: content-box;
+}
+
+.section__content {
+  display: flex;
+  flex-direction: column;
 }
 
 .section_type_gallery {
@@ -46,26 +50,10 @@
 }
 
 @media screen and (min-width: 1281px) {
-  .section {
-    padding-right: calc((100vw - 1108px) / 2);
-    padding-left: calc((100vw - 1108px) / 2);
-  }
-}
+  .section__content {
+    max-width: 1060px;
+    margin: auto;
 
-@media screen and (max-width: 1279.5px) {
-  .section {
-    padding: 110px calc((100vw - 568px) / 2);
-  }
-
-  .section_type_team {
-    padding: 110px calc((100vw - 530px) / 2);
-  }
-}
-
-@media screen and (max-width: 768px) {
-
-  .section_layout_vertical {
-    flex-direction: column;
   }
 }
 

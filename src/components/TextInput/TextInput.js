@@ -1,12 +1,13 @@
 import './TextInput.css';
+import { errorMessages } from '../../config/form';
 
-function TextInput({ title, type, required, handleInputFocus, handleChange }) {
+function TextInput({ title, type, required, onChange, errors, values }) {
   return (
     <>
       <label className="text-input-label" htmlFor={type}>
         {title}
       </label>
-      {type === 'textarea' ? (
+      {type === 'message' ? (
         <textarea
           className="text-input text-input_type_text-area"
           type={type}
@@ -14,9 +15,7 @@ function TextInput({ title, type, required, handleInputFocus, handleChange }) {
           name={type}
           required={required}
           autoComplete="on"
-          onFocus={handleInputFocus}
-          onBlur={handleInputFocus}
-          onChange={handleChange}
+          onChange={onChange}
         />
       ) : (
         <input
@@ -26,11 +25,13 @@ function TextInput({ title, type, required, handleInputFocus, handleChange }) {
           name={type}
           required={required}
           autoComplete="on"
-          onFocus={handleInputFocus}
-          onBlur={handleInputFocus}
-          onChange={handleChange}
+          onChange={onChange}
+          value={values[type] || ''}
         />
       )}
+      <span className={`text-input-error text-input-error_type_${type}`} id="name-input-error">
+        {errors[type] && errorMessages[type]}
+      </span>
     </>
   );
 }

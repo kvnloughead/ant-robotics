@@ -1,11 +1,14 @@
 .footer {
     background-color: #f9f9f9;
     border-radius: 14px;
-    display: flex;
-    flex-direction: column;
     padding: 110px 100px 110px 100px;
     margin: 10px;
     box-sizing: content-box;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
 }
 
 .footer__title {
@@ -49,6 +52,15 @@
     margin-top: -43px;
     overflow: hidden;
     box-sizing: border-box;
+    z-index: 0;
+}
+
+@media screen and (min-width: 1281px) {
+    .footer__content {
+        max-width: 1060px;
+        margin: auto;
+
+    }
 }
 
 @media screen and (max-width: 1200px) {
