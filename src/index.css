@@ -11,4 +11,5 @@
 
 .clickable:hover {
   cursor: pointer;
+  opacity: .4;
 }
