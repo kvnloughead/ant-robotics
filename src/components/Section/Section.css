@@ -57,10 +57,9 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 767px) {
   .section {
-    padding-top: 50px;
-    padding-bottom: 92px;
+    padding: 50px 12px 80px;
   }
 
   .section_layout_horizontal {
@@ -75,6 +74,11 @@
     font-size: 28px;
     line-height: 32px;
     margin-bottom: 42px;
+    padding: 50px 12px 92px;
+  }
+
+  .section__title_type_team {
+    padding: 50px 32px 80px;
   }
 }
 

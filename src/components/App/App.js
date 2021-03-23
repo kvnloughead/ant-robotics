@@ -16,6 +16,8 @@ import Banner from '../Banner/Banner';
 import { htmlIds } from '../../config/nav-link';
 
 function App() {
+  const [windowInnerWidth, setWindowInnerWidth] = useState(window.innerWidth);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [formIsOpen, setFormIsOpen] = useState(false);
   const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
@@ -23,6 +25,10 @@ function App() {
 
   const openModal = () => {
     setFormIsOpen(true);
+  };
+
+  const handleResize = () => {
+    setWindowInnerWidth(window.innerWidth);
   };
 
   const resetForm = useCallback(
@@ -40,6 +46,10 @@ function App() {
       setFormIsOpen(false);
       resetForm();
     }
+  };
+
+  const handleMenuIconClick = () => {
+    setIsMobileMenuOpen(true);
   };
 
   const handleSubmit = () => {
@@ -66,7 +76,12 @@ function App() {
         errors={errors}
         values={values}
       />
-      <Header />
+      <Header
+        windowInnerWidth={windowInnerWidth}
+        onResize={handleResize}
+        isMobileMenuOpen={isMobileMenuOpen}
+        onMenuIconClick={handleMenuIconClick}
+      />
       <Section type="products" layout="vertical" htmlId={htmlIds.productsId}>
         <Carousel products={products} />
       </Section>
