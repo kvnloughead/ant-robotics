@@ -12,6 +12,11 @@
     position: fixed;
     left: 50%;
     margin-left: -530px;
+    transition: opacity 1s ease-in-out, background-color 1s ease-in-out;
+}
+
+.header-nav_theme_light {
+    background-color: #efefef;
 }
 
 .header-nav__brand {
@@ -33,7 +38,10 @@
     margin: 0;
     padding: 0;
     gap: 14px;
+    background: transparent;
 }
+
+
 
 .header-nav__social {
     text-decoration: none;
@@ -56,15 +64,14 @@
 }
 
 .header-nav__open-menu-button {
-    background-size: cover;
     background-color: transparent;
     background-position: center;
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
     border: none;
     position: absolute;
     right: 20px;
-    top: 14px;
+    top: 17px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -72,4 +79,29 @@
         width: 87.5vw;
         margin-left: -43.75vw;
     }
+}
+
+@media screen and (max-width: 767.5px) {
+    .header-nav__links {
+        width: 87.5vw;
+        height: 214px;
+        flex-direction: column;
+        background: #393939;
+        align-items: center;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 6px;
+        position: absolute;
+        top: 58px;
+        padding: 20px 0 20px 0;
+        box-sizing: content-box;
+        gap: 18px;
+    }
+
+    .header-nav__links_theme_light {
+        background: #efefef;
+    }
+}
+
+.opacity {
+    opacity: 0.5;
 }

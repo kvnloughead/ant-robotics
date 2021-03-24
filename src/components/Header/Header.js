@@ -4,7 +4,15 @@ import Button from '../Button/Button';
 import HeaderNav from '../HeaderNav/HeaderNav';
 import { htmlIds } from '../../config/nav-link';
 
-function Header({ windowInnerWidth, onResize, isMobileMenuOpen, onMenuIconClick }) {
+function Header({
+  lastScroll,
+  windowInnerWidth,
+  onResize,
+  isMobileMenuOpen,
+  onMenuIconClick,
+  windowScrollY,
+  onScrollY,
+}) {
   return (
     <header className="header" id={htmlIds.brandId}>
       <HeaderNav
@@ -12,6 +20,9 @@ function Header({ windowInnerWidth, onResize, isMobileMenuOpen, onMenuIconClick 
         onResize={onResize}
         isMobileMenuOpen={isMobileMenuOpen}
         onMenuIconClick={onMenuIconClick}
+        windowScrollY={windowScrollY}
+        onScrollY={onScrollY}
+        lastScroll={lastScroll}
       />
       <div className="header__main">
         <img className="header__logo" src={header.logo} alt="logo" />

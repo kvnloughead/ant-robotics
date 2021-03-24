@@ -17,6 +17,8 @@ import { htmlIds } from '../../config/nav-link';
 
 function App() {
   const [windowInnerWidth, setWindowInnerWidth] = useState(window.innerWidth);
+  const [windowScrollY, setWindowScrollY] = useState(window.scrollY);
+  const [lastScroll] = useState(new Date());
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [formIsOpen, setFormIsOpen] = useState(false);
   const [values, setValues] = useState({});
@@ -29,6 +31,11 @@ function App() {
 
   const handleResize = () => {
     setWindowInnerWidth(window.innerWidth);
+  };
+
+  const handleScrollY = () => {
+    setWindowScrollY(window.scrollY);
+    setIsMobileMenuOpen(false);
   };
 
   const resetForm = useCallback(
@@ -49,7 +56,7 @@ function App() {
   };
 
   const handleMenuIconClick = () => {
-    setIsMobileMenuOpen(true);
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const handleSubmit = () => {
@@ -81,6 +88,9 @@ function App() {
         onResize={handleResize}
         isMobileMenuOpen={isMobileMenuOpen}
         onMenuIconClick={handleMenuIconClick}
+        windowScrollY={windowScrollY}
+        onScrollY={handleScrollY}
+        lastScroll={lastScroll}
       />
       <Section type="products" layout="vertical" htmlId={htmlIds.productsId}>
         <Carousel products={products} />

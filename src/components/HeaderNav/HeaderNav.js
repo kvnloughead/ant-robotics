@@ -1,41 +1,65 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './HeaderNav.css';
 import NavLink from '../NavLink/NavLink';
-import { menuIcon } from '../../config/header';
+import { darkMenuIcon, lightMenuIcon, darkCloseIcon, lightCloseIcon } from '../../config/header';
 import { links, brandTitle } from '../../config/nav-link';
 import { linkedIn } from '../../config/footer';
-import { screenSizes } from '../../utils/constants';
+import { screenSizes, lightModeStart } from '../../utils/constants';
 
-function HeaderNav({ windowInnerWidth, onResize, isMobileMenuOpen }) {
+function HeaderNav({ windowInnerWidth, onResize, isMobileMenuOpen, onMenuIconClick, windowScrollY, onScrollY }) {
+  const [isScrolling, setIsScrolling] = useState(false);
   useEffect(() => {
     window.addEventListener('resize', onResize);
   });
+  useEffect(() => {
+    let scrollingTimer;
+    window.addEventListener(
+      'scroll',
+      () => {
+        setIsScrolling(true);
+        onScrollY();
+        window.clearTimeout(scrollingTimer);
+        scrollingTimer = setTimeout(() => {
+          setIsScrolling(false);
+        }, 250);
+      },
+      false
+    );
+  });
+
+  const isMobile = windowInnerWidth <= screenSizes.mobile;
+  const isHeaderNavLight = windowScrollY > lightModeStart[isMobile ? 'mobile' : 'notMobile'];
+  const currentCloseIcon = isHeaderNavLight ? darkCloseIcon : lightCloseIcon;
+  const currentMenuIcon = isHeaderNavLight ? darkMenuIcon : lightMenuIcon;
   return (
-    <nav className="header-nav">
-      <a className="header-nav__brand" href="/">
+    <nav className={`header-nav ${isHeaderNavLight ? 'header-nav_theme_light' : ''} ${isScrolling ? 'opacity' : ''}`}>
+      <a className={`header-nav__brand ${isHeaderNavLight ? 'dark-text' : ''}`} href="/">
         {brandTitle}
       </a>
-      {(windowInnerWidth > screenSizes.mobile || isMobileMenuOpen) && (
+      {(!isMobile || isMobileMenuOpen) && (
         <>
-          <ul className="header-nav__links">
+          <ul className={`header-nav__links ${isHeaderNavLight ? 'header-nav__links_theme_light' : ''}`}>
             {links.map((link) => (
-              <NavLink id={link.id} title={link.title} key={link.id} />
+              <NavLink id={link.id} title={link.title} key={link.id} isHeaderNavLight={isHeaderNavLight} />
             ))}
           </ul>
         </>
       )}
       <a
-        className={`header-nav__social ${windowInnerWidth <= screenSizes.mobile ? 'header-nav__social_mobile' : ''}`}
+        className={`header-nav__social ${isMobile ? 'header-nav__social_mobile' : ''} ${
+          isHeaderNavLight ? 'dark-text' : ''
+        }`}
         href={linkedIn}
       >
         in
       </a>
-      {windowInnerWidth <= screenSizes.mobile && (
+      {isMobile && (
         <button
           type="button"
           aria-label="open-or-close-mobile-menu"
-          className={`${true ? 'header-nav__open-menu-button' : 'header-nav__close-menu-button'}`}
-          style={{ backgroundImage: `url(${menuIcon})` }}
+          className="header-nav__open-menu-button"
+          style={{ backgroundImage: `url(${isMobileMenuOpen ? currentCloseIcon : currentMenuIcon})` }}
+          onClick={onMenuIconClick}
         />
       )}
     </nav>
