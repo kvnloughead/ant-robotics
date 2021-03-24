@@ -1,7 +1,7 @@
 This project is configurable via a collection of JavaScript files found in the [/src/config/](./src/config/) directory. Here is a detailed list of all configurable features, with links to the relevant config files.
 
 - All section titles: [section-titles.js](src/config/section-titles.js)
-- The names of the nav links: [nav-link.js](src/config/nav-bar.js) 
+- The names of the nav links: [nav-bar.js](src/config/nav-bar.js) 
 - The text elements in the header: [header.js](src/config/header.js)
 - The image, title/subtitle and text fields for the [benefits](src/config/benefits.js), [cards-with-images](src/config/cards-with-images.js) and [team](src/config/team.js) sections are configurable.
   - The text fields in each of these three sections can be formatted using html tags, including `<b>` for bold and `<i>` for italics.
