@@ -1,0 +1,24 @@
+.section-context {
+    position: absolute;
+    margin-top: 108px;
+    width: 320px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.section-context__list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+    color: #525252;
+}
+
+.section-context__list-img {
+    width: 15px;
+    height: 10px;
+    background-image: url('../../images/products/product_context-checkmark.svg');
+}
+
+.section-context__list-item {
+    padding: 10px 0 0 14px;
+}

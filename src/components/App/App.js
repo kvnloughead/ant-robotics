@@ -1,6 +1,7 @@
 import './App.css';
 import Carousel from '../Carousel/Carousel';
 import Section from '../Section/Section';
+import SectionContext from '../SectionContext/SectionContext'
 import Gallery from '../Gallery/Gallery';
 import { products } from '../../utils/config';
 import { galleryItems } from '../../config/gallery';
@@ -19,7 +20,8 @@ function App() {
         <Gallery products={galleryItems} />
       </Section>
       <Section type="products" layout="vertical">
-        <Carousel products={products} />
+        <SectionContext />
+        <Carousel products={products} type="products" />
       </Section>
       <Section type="benefits" layout="horizontal">
         <CardList cards={benefits} type="benefits" />
