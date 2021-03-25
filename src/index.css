@@ -1,8 +1,17 @@
 @import url('./vendor/normalize.css');
 @import url('./vendor/fonts/fonts.css');
 @import url('./components/App/App.css');
-@import url('./components/Section/Section.css');
+@import url('./components/Banner/Banner.css');
+@import url('./components/Card/Card.css');
+@import url('./components/Carousel/Carousel.css');
+@import url('./components/Contact/Contact.css');
 @import url('./components/Footer/Footer.css');
+@import url('./components/Gallery/Gallery.css');
+@import url('./components/Header/Header.css');
+@import url('./components/HeaderNav/HeaderNav.css');
+@import url('./components/NavLink/NavLink.css');
+@import url('./components/Section/Section.css');
+@import url('./components/TextInput/TextInput.css');
 
 .main {
   margin: 0;
@@ -12,4 +21,8 @@
 .clickable:hover {
   cursor: pointer;
   opacity: .4;
+}
+
+.dark-text {
+  color: #000;
 }
