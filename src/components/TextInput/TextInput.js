@@ -1,7 +1,6 @@
 import './TextInput.css';
-import { errorMessages } from '../../config/form';
 
-function TextInput({ title, type, required, onChange, errors, values }) {
+function TextInput({ title, type, required, onChange, showErrors, errors, values }) {
   return (
     <>
       <label className="text-input-label" htmlFor={type}>
@@ -16,6 +15,7 @@ function TextInput({ title, type, required, onChange, errors, values }) {
           required={required}
           autoComplete="on"
           onChange={onChange}
+          value={values[type] || ''}
         />
       ) : (
         <input
@@ -30,7 +30,7 @@ function TextInput({ title, type, required, onChange, errors, values }) {
         />
       )}
       <span className={`text-input-error text-input-error_type_${type}`} id="name-input-error">
-        {errors[type] && errorMessages[type]}
+        {showErrors && errors[type]}
       </span>
     </>
   );

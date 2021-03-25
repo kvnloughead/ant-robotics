@@ -23,10 +23,12 @@
 }
 
 .text-input-error {
-  color: red;
+  color: #FAA805;
   font-size: 12px;
+  font-weight: 600;
   height: 20px;
   line-height: 19px;
+  text-align: right;
 }
 
 @media screen and (max-width: 425px) {
