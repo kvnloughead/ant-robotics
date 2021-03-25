@@ -9,24 +9,25 @@
     list-style: none;
 }
 
-.carousel-arrow_left {
-    width: 18px;
-    height: 12px;
-    background-color: red;
+.carousel-arrow {
+    background-image: url('../../images/products/product_carousel-arrow_left.svg');
     position: absolute;
     top: 156px;
+    width: 18px;
+    height: 14px;
+    align-items: center;
+}
+
+.carousel-arrow:hover {
+    cursor: pointer;
+}
+
+.carousel-arrow_left {
     left: 22px;
 }
 
 .carousel-arrow_right {
-    align-items: center;
-    margin-right: 0;
-    width: 18px;
-    height: 12px;
     transform: rotate(180deg);
-    background-color: red;
-    position: absolute;
-    top: 156px;
     right: 22px;
 }
 
@@ -37,9 +38,9 @@
 .carousel-item__image {
     width: 160px;
     height: 160px;
-    margin-left: 80px;
+    margin-left: 40px;
     z-index: 2;
-    background-color: blue;
+    background-image: url('../../images/products/product_1-otto.svg');
     align-items: center;
     position: absolute;
     top: 82px;

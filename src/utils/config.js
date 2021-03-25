@@ -23,7 +23,7 @@ export const benefits = [
 
 export const products = [
   {
-    image: './public/images/products-1-OTTO.svg',
+    image: './public/images/products_1-otto.svg',
     title: 'OTTO 100 (pending)',
     data: {
       'Max payload: ': '220 lbs (100kg)',
