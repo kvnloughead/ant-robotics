@@ -23,6 +23,10 @@
   margin-top: 30px;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 425px) {
   .button_location_form {
     width: 280px;
