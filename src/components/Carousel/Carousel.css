@@ -2,7 +2,7 @@
     width: 575px;
     height: 324px;
     background: #FFFFFF;
-    box-shadow: 0px 4px 40px 0px #000000 4%;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, .04);
     border-radius: 6px;
     position: absolute;
     right: 100px;
