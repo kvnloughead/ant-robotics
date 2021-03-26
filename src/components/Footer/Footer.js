@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { sectionTitles } from '../../config/section-titles';
 import Contact from '../Contact/Contact';
 import { contacts, copyright, address } from '../../config/contacts';
-import { htmlIds } from '../../config/nav-link';
+import { htmlIds } from '../../config/nav-bar';
 
 function Footer() {
   return (

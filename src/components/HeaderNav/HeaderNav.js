@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import './HeaderNav.css';
 import NavLink from '../NavLink/NavLink';
-import { darkMenuIcon, lightMenuIcon, darkCloseIcon, lightCloseIcon } from '../../config/header';
-import { links, brandTitle } from '../../config/nav-link';
-import { linkedIn } from '../../config/footer';
+import { links, brandTitle, darkMenuIcon, lightMenuIcon, darkCloseIcon, lightCloseIcon } from '../../config/nav-bar';
+import { linkedIn } from '../../config/contacts';
 import { screenSizes, lightModeStart } from '../../utils/constants';
 
 function HeaderNav({ windowInnerWidth, onResize, isMobileMenuOpen, onMenuIconClick, windowScrollY, onScrollY }) {
