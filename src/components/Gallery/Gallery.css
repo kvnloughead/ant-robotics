@@ -70,13 +70,7 @@
   }
 }
 
-@media screen and (max-width: 320px) { 
-  .gallery__image {
-    width: 280px;
-    height: 160px;
-    margin-bottom: 26px;
-  }
-
+@media screen and (max-width: 500px) { 
   .gallery__text {
     font-size: 10px;
   }
@@ -94,5 +88,13 @@
 
   .arrow-button_right {
     right: 0;
+  }
+}
+
+@media screen and (max-width: 320px) { 
+  .gallery__image {
+    width: 280px;
+    height: 160px;
+    margin-bottom: 26px;
   }
 }
