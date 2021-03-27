@@ -11,6 +11,7 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import { benefits } from '../../config/benefits';
 import { cardsWithImages } from '../../config/cards-with-images';
+import { errorMessages } from '../../config/form';
 import { team } from '../../config/team';
 import Banner from '../Banner/Banner';
 import { htmlIds } from '../../config/nav-bar';
@@ -22,7 +23,8 @@ function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [formIsOpen, setFormIsOpen] = useState(false);
   const [values, setValues] = useState({});
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState(errorMessages);
+  const [showErrors, setShowErrors] = useState(false);
   const [isValid, setIsValid] = useState(false);
 
   const openModal = () => {
@@ -43,6 +45,7 @@ function App() {
       setValues(newValues);
       setErrors(newErrors);
       setIsValid(newIsValid);
+      setShowErrors(false);
     },
     [setValues, setErrors, setIsValid]
   );
@@ -59,17 +62,21 @@ function App() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const handleSubmit = () => {
-    setFormIsOpen(false);
-  };
-
   const handleChange = (event) => {
     const { target } = event;
-    const { name } = target;
-    const { value } = target;
+    const { name, value } = target;
     setValues({ ...values, [name]: value });
-    setErrors({ ...errors, [name]: target.validationMessage });
+    setErrors({ ...errors, [name]: target.validationMessage || '' });
     setIsValid(target.closest('form').checkValidity());
+  };
+
+  const handleSubmit = (event, canSubmit) => {
+    event.stopPropagation();
+    if (canSubmit) {
+      closeModal();
+    } else {
+      setShowErrors(true);
+    }
   };
 
   return (
@@ -81,6 +88,7 @@ function App() {
         onSubmit={handleSubmit}
         handleChange={handleChange}
         errors={errors}
+        showErrors={showErrors}
         values={values}
       />
       <Header
