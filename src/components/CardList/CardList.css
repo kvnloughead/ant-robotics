@@ -30,6 +30,14 @@
   .card-list {
     grid-column-gap: 78px;
   }
+
+  .card-list_type_team {
+    grid-row-gap: 50px;
+  }
+
+  .card-list_type_benefits {
+    grid-row-gap: 40px;
+  }
 }
 
 @media screen and (max-width: 600px) {
