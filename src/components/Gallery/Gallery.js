@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Gallery.css';
-import { galleryItems } from '../../config/gallery';
+import { galleryItems, arrows } from '../../config/gallery';
 
 function Gallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,6 +22,7 @@ function Gallery() {
             type="button"
             aria-label="previous-image"
             onClick={handleArrowClick}
+            style={{ backgroundImage: `url(${currentIndex > 0 ? arrows.left : arrows.leftInactive})` }}
           />
           <img
             className="gallery__image"
@@ -33,6 +34,9 @@ function Gallery() {
             type="button"
             aria-label="next-image"
             onClick={handleArrowClick}
+            style={{
+              backgroundImage: `url(${currentIndex < galleryItems.length - 1 ? arrows.right : arrows.rightInactive})`,
+            }}
           />
         </div>
         <figcaption className="gallery__text">{galleryItems[currentIndex].text}</figcaption>

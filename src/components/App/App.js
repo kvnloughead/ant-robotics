@@ -13,7 +13,7 @@ import { benefits } from '../../config/benefits';
 import { cardsWithImages } from '../../config/cards-with-images';
 import { team } from '../../config/team';
 import Banner from '../Banner/Banner';
-import { htmlIds } from '../../config/nav-link';
+import { htmlIds } from '../../config/nav-bar';
 
 function App() {
   const [windowInnerWidth, setWindowInnerWidth] = useState(window.innerWidth);

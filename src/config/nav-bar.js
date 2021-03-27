@@ -36,3 +36,8 @@ export const links = [
     title: 'Contact Us',
   },
 ];
+
+export const darkMenuIcon = './images/header/menu-icon-dark.svg';
+export const lightMenuIcon = './images/header/menu-icon-light.svg';
+export const darkCloseIcon = './images/header/dark-close-icon.svg';
+export const lightCloseIcon = './images/header/light-close-icon.svg';

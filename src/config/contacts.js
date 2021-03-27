@@ -1,4 +1,7 @@
 export const address = '8000 Edgewater Dr., Oakland, CA 94621, USA';
+export const copyright = '© ANT Robotics, 2020.';
+export const title = 'Contacts';
+export const linkedIn = 'https://www.linkedin.com/company/antrobotics';
 export const contacts = [
   {
     type: 'text',
@@ -21,6 +24,3 @@ export const contacts = [
     value: 'https://www.linkedin.com/company/antrobotics',
   },
 ];
-
-export const copyright = '© ANT Robotics, 2020.';
-export const title = 'Contacts';

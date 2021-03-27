@@ -2,7 +2,7 @@ import './Header.css';
 import { header } from '../../config/header';
 import Button from '../Button/Button';
 import HeaderNav from '../HeaderNav/HeaderNav';
-import { htmlIds } from '../../config/nav-link';
+import { htmlIds } from '../../config/nav-bar';
 
 function Header({
   lastScroll,
