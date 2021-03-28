@@ -49,7 +49,7 @@ function Form({ modalType, onClose, isOpen, isValid, handleChange, errors, value
           required
           onChange={handleChange}
         />
-        <Button onClick={(event) => onSubmit(event, isValid)} label="Submit" location="form" isValid={isValid} />
+        <Button id="submit" onClick={(event) => onSubmit(event, isValid)} location="form" isValid={isValid} />
       </form>
       <div
         role="button"

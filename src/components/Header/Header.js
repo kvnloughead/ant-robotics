@@ -30,11 +30,11 @@ function Header({
         <p className="header__subtitle">{header.subtitle}</p>
         <div className="header__buttons">
           <Button
+            id="watch-video"
             className="header__button"
-            label="Watch Video"
             style={{ background: '#242424', border: '1px solid #717171', color: '#A0A0A0' }}
           />
-          <Button className="header__button" label="Learn more" />
+          <Button id="learn-more" className="header__button" />
         </div>
       </div>
     </header>
