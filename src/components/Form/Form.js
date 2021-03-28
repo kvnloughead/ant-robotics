@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import './Form.css';
-
+import { formTitle } from '../../config/form';
 import Button from '../Button/Button';
 import TextInput from '../TextInput/TextInput';
 
@@ -20,7 +20,7 @@ function Form({ modalType, onClose, isOpen, isValid, handleChange, errors, value
         action="#"
         noValidate
       >
-        <h2 className="form__title">Write us</h2>
+        <h2 className="form__title">{formTitle}</h2>
         <button className="form__close-button clickable" type="button" aria-label="close-modal" onClick={onClose} />
         <TextInput
           values={values}
