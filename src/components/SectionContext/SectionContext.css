@@ -54,5 +54,9 @@
     }
 }
 
-@media screen and (max-width: 320px) { 
+@media screen and (max-width: 320px) {
+    .section-context__subheading {
+        margin: auto;
+        width: 280px;
+    }
 }

@@ -89,6 +89,10 @@
     line-height: 32px;
     text-align: center;
   }
+
+  .section__title_type_products {
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -109,6 +113,10 @@
     font-size: 28px;
     line-height: 32px;
     margin-bottom: 42px;
+  }
+
+  .section_type_products {
+    height: 898px;
   }
 }
 
