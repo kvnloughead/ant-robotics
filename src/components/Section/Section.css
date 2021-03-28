@@ -67,9 +67,17 @@
 }
 
 @media screen and (max-width: 768px) {
-
   .section_layout_vertical {
     flex-direction: column;
+  }
+
+  .section_type_products {
+    height: 986px;
+    align-items: center;
+  }
+
+  .section__title_type_products {
+    text-align: center;
   }
 }
 

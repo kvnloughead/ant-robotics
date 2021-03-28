@@ -7,15 +7,15 @@ export default function SectionContext() {
             <ul className='section-context__list'>
                 <li className='section-context__list-item'>
                     <img className='section-context__list-img' alt='checkmark'  src='../../images/products/product_context-checkmark.svg' />
-                    Some facts here and below
+                    <span className='section-context__list-text'>Some facts here and below</span>
                 </li>
                 <li className='section-context__list-item'>
                     <img className='section-context__list-img' alt='checkmark' src='../../images/products/product_context-checkmark.svg' />
-                    Flexible
+                    <span className='section-context__list-text'>Flexible</span>
                 </li>
                 <li className='section-context__list-item'>
                     <img className='section-context__list-img' alt='checkmark' src='../../images/products/product_context-checkmark.svg' />
-                    Customizable
+                    <span className='section-context__list-text'>Customizable</span>
                 </li>
             </ul>
         </div>
