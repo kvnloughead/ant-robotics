@@ -3,7 +3,7 @@ import './Carousel.css';
 import Button from '../Button/Button';
 // import { products } from '../../config/products';
 
-function Carousel(props) {
+export default function Carousel(props) {
   // const [currentIndex, setCurrentIndex] = useState(0);
 
   // const handleArrowClick = (evt) => {
@@ -43,4 +43,3 @@ function Carousel(props) {
   );
 }
 
-export default Carousel;

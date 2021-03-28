@@ -1,7 +1,7 @@
 import './App.css';
 import Carousel from '../Carousel/Carousel';
 import Section from '../Section/Section';
-import SectionContext from '../SectionContext/SectionContext'
+import SectionContext from '../SectionContext/SectionContext';
 import Gallery from '../Gallery/Gallery';
 import { products } from '../../utils/config';
 import { galleryItems } from '../../config/gallery';
