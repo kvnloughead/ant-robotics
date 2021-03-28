@@ -81,6 +81,16 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .section__title {
+    margin: auto;
+    margin-bottom: 82px;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .section {
     padding-top: 50px;
@@ -102,13 +112,4 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  .section__title {
-    margin: auto;
-    margin-bottom: 82px;
-    font-size: 28px;
-    line-height: 32px;
-    text-align: center;
-  }
-}
 

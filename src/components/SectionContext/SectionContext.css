@@ -31,9 +31,17 @@
 @media screen and (max-width: 768px) {
     .section-context {
         text-align: center;
-        padding-top: 22px;
         display: flex;
         flex-direction: column;
+    }
+
+    .section-context__subheading {
+        padding-bottom: 20px;
+        width: 320px;
+    }
+
+    .section-context__list-item {
+        padding-top: 0;
     }
 
     .section-context__list-text::before{
@@ -42,7 +50,7 @@
     }
 
     .section-context__list-img {
-        padding-right: 0;
+        padding: 20px 0 4px;
     }
 }
 
