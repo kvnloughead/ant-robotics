@@ -17,11 +17,11 @@ export default function Carousel(props) {
   return (
     <>
       <ul className="carousel">
-        <image className="carousel-arrow carousel-arrow_left" />
+        <img className="carousel-arrow carousel-arrow_left" alt="left slider arrow" />
         {/* onClick={handleArrowClick} */}
         {props.products.map((product) => (
           <li className="carousel-item">
-            <image className="carousel-item__image" />
+            <img className="carousel-item__image" alt="robot product discussed in each card" />
             {/* src={product.image} with map OR src={products[currentIndex].image with state} */}
             <div className="carousel-item__details">
               <h3 className="carousel-item__title">{product.title}</h3>
@@ -37,7 +37,7 @@ export default function Carousel(props) {
             </div>
           </li>
         ))}
-        <image className="carousel-arrow carousel-arrow_right" />
+        <img className="carousel-arrow carousel-arrow_right" alt="right slider arrow" />
       </ul>
     </>
   );
