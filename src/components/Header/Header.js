@@ -24,6 +24,11 @@ function Header({
         onScrollY={onScrollY}
         lastScroll={lastScroll}
       />
+      <div className="header__column_left">
+        <div />
+        <div style={{ backgroundImage: `url(${header.curve})` }} />
+        <div style={{ backgroundImage: `url(${header.curve})` }} />
+      </div>
       <div className="header__main">
         <img className="header__logo" src={header.logo} alt="logo" />
         <h1 className="header__title">{header.title}</h1>
@@ -36,6 +41,11 @@ function Header({
           />
           <Button id="header-secondary-button" className="header__button" />
         </div>
+      </div>
+      <div className="header__column_right">
+        <div />
+        <div style={{ backgroundImage: `url(${header.curve})` }} />
+        <div style={{ backgroundImage: `url(${header.curve})` }} />
       </div>
     </header>
   );
