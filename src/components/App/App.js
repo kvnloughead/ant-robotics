@@ -102,7 +102,8 @@ function App() {
         lastScroll={lastScroll}
       />
       <Section type="products" layout="vertical" htmlId={htmlIds.productsId}>
-        <Carousel products={products} />
+        <SectionContext />
+        <Carousel products={products} type="products" />
       </Section>
       <Section type="benefits" layout="horizontal" htmlId={htmlIds.benefitsId}>
         <CardList cards={benefits} type="benefits" />
@@ -118,6 +119,7 @@ function App() {
       </Section>
       <Banner onClick={openModal} />
       <Footer />
+      
     </>
   );
 }
