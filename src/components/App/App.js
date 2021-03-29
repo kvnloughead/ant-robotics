@@ -82,14 +82,6 @@ function App() {
 
   return (
     <>
-      <Form />
-      <Section type="gallery" layout="horizontal" title="Gallery">
-        <Gallery products={galleryItems} />
-      </Section>
-      <Section type="products" layout="vertical">
-        <SectionContext />
-        <Carousel products={products} type="products" />
-      </Section>
       <Form
         isOpen={formIsOpen}
         isValid={isValid}
