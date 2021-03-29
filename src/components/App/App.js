@@ -82,7 +82,6 @@ function App() {
 
   return (
     <>
-<<<<<<< HEAD
       <Form />
       <Section type="gallery" layout="horizontal" title="Gallery">
         <Gallery products={galleryItems} />
@@ -90,7 +89,7 @@ function App() {
       <Section type="products" layout="vertical">
         <SectionContext />
         <Carousel products={products} type="products" />
-=======
+      </Section>
       <Form
         isOpen={formIsOpen}
         isValid={isValid}
@@ -112,7 +111,6 @@ function App() {
       />
       <Section type="products" layout="vertical" htmlId={htmlIds.productsId}>
         <Carousel products={products} />
->>>>>>> main
       </Section>
       <Section type="benefits" layout="horizontal" htmlId={htmlIds.benefitsId}>
         <CardList cards={benefits} type="benefits" />
