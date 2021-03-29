@@ -12,3 +12,10 @@ export const galleryItems = [
     text: "Our competitor's robots",
   },
 ];
+
+export const arrows = {
+  left: './images/gallery/left-arrow.svg',
+  right: './images/gallery/right-arrow.svg',
+  leftInactive: './images/gallery/left-arrow-inactive.png',
+  rightInactive: './images/gallery/right-arrow-inactive.svg',
+};

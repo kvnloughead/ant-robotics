@@ -20,7 +20,11 @@
   height: 44px;
   font-weight: 700;
   line-height: 17px;
-  margin-top: 30px;
+  margin-top: 10px;
+}
+
+.button_inactive {
+  background-color: #808080;
 }
 
 .button:hover {
@@ -30,6 +34,6 @@
 @media screen and (max-width: 425px) {
   .button_location_form {
     width: 280px;
-    margin-top: 81px;
+    margin-top: 61px;
   }
 }

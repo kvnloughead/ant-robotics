@@ -2,7 +2,7 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 17px;
-  margin: 20px 0 10px;
+  margin: 0 0 10px;
 }
 
 .text-input {
@@ -19,6 +19,16 @@
 
 .text-input_type_text-area {
   height: 100px;
+  resize: none;
+}
+
+.text-input-error {
+  color: #FAA805;
+  font-size: 12px;
+  font-weight: 600;
+  height: 20px;
+  line-height: 19px;
+  text-align: right;
 }
 
 @media screen and (max-width: 425px) {

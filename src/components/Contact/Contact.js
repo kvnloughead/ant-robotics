@@ -10,7 +10,7 @@ const Contact = ({ contact: { title, type, value } }) => {
       );
     case 'email':
       return (
-        <li className="contact">
+        <li className="contact clickable">
           <strong> {title}</strong>:&nbsp;
           <a className="contact__link" href={`mailto:${value}`}>
             {value}
@@ -28,7 +28,7 @@ const Contact = ({ contact: { title, type, value } }) => {
       );
     case 'link':
       return (
-        <li className="contact">
+        <li className="contact clickable">
           <strong>
             <a className="contact__link" href={value}>
               {title}

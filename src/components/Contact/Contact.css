@@ -15,3 +15,9 @@
     text-decoration: none;
     color: #000000;
 }
+
+@media screen and (max-width: 500px) {
+    .contact:first-child {
+        margin-top: 40px;
+    }
+}
