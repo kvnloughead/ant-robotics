@@ -36,7 +36,7 @@
     }
 
     .section-context__subheading {
-        padding-bottom: 20px;
+        padding: 22px 0;
         width: 320px;
     }
 
@@ -55,6 +55,12 @@
 }
 
 @media screen and (max-width: 320px) {
+    .section-context {
+        top: 564px;
+        padding: 0;
+        margin-top: 0;
+    }
+
     .section-context__subheading {
         margin: auto;
         width: 280px;
