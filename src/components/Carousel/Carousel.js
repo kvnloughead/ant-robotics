@@ -33,7 +33,7 @@ export default function Carousel(props) {
                   </li>
                 ))}
               </ul>
-              <Button className="carousel-item__button" label="Get more info" style={{ background: 'black' }} />
+              <Button className="carousel-item__button" label="Get more info" id="carousel" style={{ background: 'black' }} />
             </div>
           </li>
         ))}
