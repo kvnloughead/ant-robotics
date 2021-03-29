@@ -73,11 +73,12 @@
 
   .section_type_products {
     height: 986px;
-    align-items: center;
+    position: relative;
   }
 
   .section__title_type_products {
     text-align: center;
+    margin: 514px auto 0;
   }
 }
 
@@ -88,10 +89,6 @@
     font-size: 28px;
     line-height: 32px;
     text-align: center;
-  }
-
-  .section__title_type_products {
-    margin: 0;
   }
 }
 
@@ -117,7 +114,6 @@
 
   .section_type_products {
     height: 898px;
-    position: relative;
     padding-bottom: 0;
   }
 
