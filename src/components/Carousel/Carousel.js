@@ -28,13 +28,18 @@ export default function Carousel(props) {
   return (
     <>
       <ul className="carousel">
-        <button className="carousel-arrow carousel-arrow_left" type="button" alt="left slider arrow" 
+        <button
+          className="carousel-arrow carousel-arrow_left"
+          type="button"
+          alt="left slider arrow"
           onClick={handleArrowClick}
           style={{ backgroundImage: `url(${currentIndex > 0 ? arrows.left : arrows.leftInactive})` }}
         />
         {props.products.map((product) => (
           <li className="carousel-item">
-            <img className="carousel-item__image" alt="robot product discussed in each card"
+            <img
+              className="carousel-item__image"
+              alt="robot product discussed in each card"
               src={products[currentIndex].image}
             />
             <div className="carousel-item__details">
@@ -47,7 +52,11 @@ export default function Carousel(props) {
                   </li>
                 ))}
               </ul>
-              <Button className="carousel-item__button" label="Get more info" id="carousel" style={{ background: 'black' }}
+              <Button
+                className="carousel-item__button"
+                label="Get more info"
+                id="carousel"
+                style={{ background: 'black' }}
                 onClick={openForm}
                 isOpen={isFormOpen}
                 onClose={closeForm}
@@ -55,12 +64,16 @@ export default function Carousel(props) {
             </div>
           </li>
         ))}
-        <button className="carousel-arrow carousel-arrow_right" type="button" alt="right slider arrow"
+        <button
+          className="carousel-arrow carousel-arrow_right"
+          type="button"
+          alt="right slider arrow"
           onClick={handleArrowClick}
-          style={{ backgroundImage: `url(${currentIndex < products.length - 1 ? arrows.right : arrows.rightInactive})` }}
+          style={{
+            backgroundImage: `url(${currentIndex < products.length - 1 ? arrows.right : arrows.rightInactive})`,
+          }}
         />
       </ul>
     </>
   );
 }
-
