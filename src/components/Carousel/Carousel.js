@@ -7,13 +7,13 @@ function Carousel(props) {
       <ul className="carousel">
         <image className="carousel-arrow carousel-arrow_left" />
         {props.products.map((product) => (
-          <li className="carousel-item">
+          <li key={product.id} className="carousel-item">
             <image className="carousel-item__image" src={product.image} />
             <div className="carousel-item__details">
               <h3 className="carousel-item__title">{product.title}</h3>
               <ul className="carousel-item__specs">
                 {Object.entries(product.data).map(([key, value]) => (
-                  <li className="carousel-item__spec">
+                  <li key={`${product.id}-${key}-${value}`} className="carousel-item__spec">
                     <span className="carousel-item__spec-type">{key}</span>
                     {value}
                   </li>

@@ -39,7 +39,7 @@ function HeaderNav({ windowInnerWidth, onResize, isMobileMenuOpen, onMenuIconCli
         <>
           <ul className={`header-nav__links ${isHeaderNavLight ? 'header-nav__links_theme_light' : ''}`}>
             {links.map((link) => (
-              <NavLink id={link.id} title={link.title} key={link.id} isHeaderNavLight={isHeaderNavLight} />
+              <NavLink htmlId={link.htmlId} title={link.title} key={link.id} isHeaderNavLight={isHeaderNavLight} />
             ))}
           </ul>
         </>

@@ -1,3 +1,5 @@
+import { addUniqueId } from '../utils/helpers';
+
 export const title = 'Gallery';
 
 export const data = [
@@ -21,3 +23,5 @@ export const arrows = {
   leftInactive: './images/gallery/left-arrow-inactive.png',
   rightInactive: './images/gallery/right-arrow-inactive.svg',
 };
+
+addUniqueId(data);

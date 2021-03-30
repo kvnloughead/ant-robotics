@@ -1,3 +1,5 @@
+import { addUniqueId } from '../utils/helpers';
+
 export const title = 'Customers benefit despite of the automation level';
 
 export const data = [
@@ -26,3 +28,5 @@ export const data = [
       '<b>Challenges</b>: Limited upgrade options within the same vendor robot line only and too expensive to use another vendor robots.',
   },
 ];
+
+addUniqueId(data);

@@ -1,3 +1,5 @@
+import { addUniqueId } from '../utils/helpers';
+
 export const title = 'Wide choice of transport robots';
 
 export const data = [
@@ -12,15 +14,6 @@ export const data = [
       'Charging time: ': '1.2hrs (0-80%: 0.75 hrs)',
     },
   },
-  // {
-  //   "image": "./public/images/products-2-placeholder.svg",
-  //   "title": "Placeholder",
-  //   "data": {
-  //     "Max payload: ": "220 lbs (100kg)",
-  //     "Size: ": "740 x 550 x 310 mm",
-  //     "Max speed: ": "4.3 mph",
-  //     "Running time: ": "4 hrs or 9 mi",
-  //     "Charging time: ": "1.2hrs (0-80%: 0.75 hrs)"
-  //   },
-  // }
 ];
+
+addUniqueId(data);

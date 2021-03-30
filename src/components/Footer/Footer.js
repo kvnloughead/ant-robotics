@@ -13,7 +13,7 @@ function Footer() {
         <div className="footer__columns">
           <ul className="footer__contacts">
             {contactsConfig.contacts.map((contact) => (
-              <Contact contact={contact} key={JSON.stringify(contact)} />
+              <Contact contact={contact} key={contact.id} />
             ))}
           </ul>
           <MapContainer
