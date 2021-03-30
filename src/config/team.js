@@ -1,4 +1,6 @@
-export const team = [
+export const title = 'Team';
+
+export const data = [
   {
     title: 'Max Antonenko',
     job: 'CEO',

@@ -1,4 +1,6 @@
-export const benefits = [
+export const title = 'Benefits';
+
+export const data = [
   {
     image: './images/benefits/benefits-icon-hexagon.svg',
     title: 'Top-Notch Technology',
