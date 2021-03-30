@@ -16,7 +16,7 @@
 }
 
 .section_type_products {
-  padding-bottom: 270px;
+  min-height: 324px;
 }
 
 .section_layout_vertical {
