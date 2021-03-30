@@ -1,4 +1,4 @@
-# AntRobtics Landing Page Overhaul
+# Ant Robotics Landing Page Overhaul
 
 ## Dev Team
 Kevin Loughead  
