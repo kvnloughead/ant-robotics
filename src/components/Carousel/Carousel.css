@@ -70,7 +70,16 @@
     color: #525252;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1280px) {
+    .carousel {
+        position: absolute;
+        top: 110px;
+        left: 70%;
+        transform: translate(-50%, 0);
+    }
+}
+
+@media screen and (max-width: 1279px) {
     .carousel {
         position: absolute;
         top: 110px;
@@ -79,7 +88,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 670px) {
     .carousel {
         width: 220px;
         height: 418px;

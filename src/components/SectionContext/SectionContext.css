@@ -28,7 +28,7 @@
     padding: 10px 0 0;
 }
   
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1279px) {
     .section-context {
         text-align: center;
         display: flex;
@@ -54,6 +54,17 @@
 
     .section-context__list-img {
         padding: 20px 0 4px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-context {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 500px;
     }
 }
 
