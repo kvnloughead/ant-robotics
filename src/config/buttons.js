@@ -1,6 +1,6 @@
 export const labelsById = {
-  'header-primary-button': 'Watch Video',
-  'header-secondary-button': 'Learn more',
+  headerPrimaryButton: 'Watch Video',
+  headerSecondaryButton: 'Learn more',
   carousel: 'Get more info',
   banner: 'Click here!',
   submit: 'Submit',

@@ -30,11 +30,11 @@ function Header({
         <p className="header__subtitle">{header.subtitle}</p>
         <div className="header__buttons">
           <Button
-            id="header-primary-button"
+            id="headerPrimaryButton"
             className="header__button"
             style={{ background: '#242424', border: '1px solid #717171', color: '#A0A0A0' }}
           />
-          <Button id="header-secondary-button" className="header__button" />
+          <Button id="headerSecondaryButton" className="header__button" />
         </div>
       </div>
     </header>
