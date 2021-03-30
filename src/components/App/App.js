@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import Carousel from '../Carousel/Carousel';
 import Section from '../Section/Section';
 import Gallery from '../Gallery/Gallery';
@@ -11,7 +11,7 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import { benefits } from '../../config/benefits';
 import { cardsWithImages } from '../../config/cards-with-images';
-import { errorMessages } from '../../config/form';
+// import { errorMessages } from '../../config/form';
 import { team } from '../../config/team';
 import Banner from '../Banner/Banner';
 import { htmlIds } from '../../config/nav-bar';
@@ -22,10 +22,6 @@ function App() {
   const [lastScroll] = useState(new Date());
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [formIsOpen, setFormIsOpen] = useState(false);
-  const [values, setValues] = useState({});
-  const [errors, setErrors] = useState(errorMessages);
-  const [showErrors, setShowErrors] = useState(false);
-  const [isValid, setIsValid] = useState(false);
 
   const openModal = () => {
     setFormIsOpen(true);
@@ -40,57 +36,13 @@ function App() {
     setIsMobileMenuOpen(false);
   };
 
-  const resetForm = useCallback(
-    (newValues = { email: '', password: '', message: '' }, newErrors = {}, newIsValid = false) => {
-      setValues(newValues);
-      setErrors(newErrors);
-      setIsValid(newIsValid);
-      setShowErrors(false);
-    },
-    [setValues, setErrors, setIsValid]
-  );
-
-  const closeModal = (evt) => {
-    evt.stopPropagation();
-    if (evt.type === 'click' || evt.key === 'Escape') {
-      setFormIsOpen(false);
-      resetForm();
-    }
-  };
-
   const handleMenuIconClick = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const handleChange = (event) => {
-    const { target } = event;
-    const { name, value } = target;
-    setValues({ ...values, [name]: value });
-    setErrors({ ...errors, [name]: target.validationMessage || '' });
-    setIsValid(target.closest('form').checkValidity());
-  };
-
-  const handleSubmit = (event, canSubmit) => {
-    event.stopPropagation();
-    if (canSubmit) {
-      closeModal();
-    } else {
-      setShowErrors(true);
-    }
-  };
-
   return (
     <>
-      <Form
-        isOpen={formIsOpen}
-        isValid={isValid}
-        onClose={closeModal}
-        onSubmit={handleSubmit}
-        handleChange={handleChange}
-        errors={errors}
-        showErrors={showErrors}
-        values={values}
-      />
+      <Form isOpen={formIsOpen} setIsOpen={setFormIsOpen} />
       <Header
         windowInnerWidth={windowInnerWidth}
         onResize={handleResize}
