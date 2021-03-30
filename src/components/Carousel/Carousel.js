@@ -17,11 +17,19 @@ export default function Carousel(props) {
   return (
     <>
       <ul className="carousel">
-        <img className="carousel-arrow carousel-arrow_left" src="../../images/products/product_carousel-arrow_left.svg" alt="left slider arrow" />
+        <img
+          className="carousel-arrow carousel-arrow_left"
+          src="../../images/products/product_carousel-arrow_left.svg"
+          alt="left slider arrow"
+        />
         {/* onClick={handleArrowClick} */}
         {props.products.map((product) => (
           <li className="carousel-item">
-            <img className="carousel-item__image" src="../../images/products/product_1-otto.svg" alt="robot product discussed in each card" />
+            <img
+              className="carousel-item__image"
+              src="../../images/products/product_1-otto.svg"
+              alt="robot product discussed in each card"
+            />
             {/* src={product.image} with map OR src={products[currentIndex].image with state} */}
             <div className="carousel-item__details">
               <h3 className="carousel-item__title">{product.title}</h3>
@@ -33,13 +41,21 @@ export default function Carousel(props) {
                   </li>
                 ))}
               </ul>
-              <Button className="carousel-item__button" label="Get more info" id="carousel" style={{ background: 'black' }} />
+              <Button
+                className="carousel-item__button"
+                label="Get more info"
+                id="carousel"
+                style={{ background: 'black' }}
+              />
             </div>
           </li>
         ))}
-        <img className="carousel-arrow carousel-arrow_right" src="../../images/products/product_carousel-arrow_left.svg" alt="right slider arrow" />
+        <img
+          className="carousel-arrow carousel-arrow_right"
+          src="../../images/products/product_carousel-arrow_left.svg"
+          alt="right slider arrow"
+        />
       </ul>
     </>
   );
 }
-

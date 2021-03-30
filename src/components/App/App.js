@@ -119,7 +119,6 @@ function App() {
       </Section>
       <Banner onClick={openModal} />
       <Footer />
-      
     </>
   );
 }
