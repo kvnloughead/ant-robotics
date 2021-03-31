@@ -2,31 +2,31 @@
     width: 575px;
     height: 324px;
     background: #FFFFFF;
-    box-shadow: 0px 4px 40px 0px #000000 4%;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, .04);
     border-radius: 6px;
     position: absolute;
     right: 100px;
     list-style: none;
 }
 
-.carousel-arrow_left {
-    width: 18px;
-    height: 12px;
-    background-color: red;
+.carousel-arrow {
     position: absolute;
     top: 156px;
+    width: 18px;
+    height: 14px;
+    align-items: center;
+}
+
+.carousel-arrow:hover {
+    cursor: pointer;
+}
+
+.carousel-arrow_left {
     left: 22px;
 }
 
 .carousel-arrow_right {
-    align-items: center;
-    margin-right: 0;
-    width: 18px;
-    height: 12px;
     transform: rotate(180deg);
-    background-color: red;
-    position: absolute;
-    top: 156px;
     right: 22px;
 }
 
@@ -37,9 +37,8 @@
 .carousel-item__image {
     width: 160px;
     height: 160px;
-    margin-left: 80px;
+    margin-left: 40px;
     z-index: 2;
-    background-color: blue;
     align-items: center;
     position: absolute;
     top: 82px;
@@ -69,4 +68,71 @@
 .carousel-item__spec-type {
     font-weight: 400;
     color: #525252;
+}
+
+@media screen and (min-width: 1280px) {
+    .carousel {
+        position: absolute;
+        top: 110px;
+        left: 70%;
+        transform: translate(-50%, 0);
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .carousel {
+        position: absolute;
+        top: 110px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .carousel {
+        width: 220px;
+        height: 418px;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        display: flex;
+    }
+
+    .carousel-item {
+        padding: 0 0 36px;
+        justify-items: center;
+    }
+    
+    .carousel-item__image {
+        top: 30px;
+        margin: 0 20px;
+        background-repeat: no-repeat;
+    }
+
+    .carousel-arrow {
+        top: 104px;
+    }
+
+    .carousel-arrow_left {
+        left: 12px;
+    }
+
+    .carousel-arrow_right {
+        right: 12px;
+    }
+
+    .carousel-item__details {
+        margin: 0;
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    .carousel-item__title {
+        margin-top: 210px;
+    }
+
+    .carousel-item__specs {
+        padding: 18px 0 32px;
+    }
 }
