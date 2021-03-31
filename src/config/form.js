@@ -1,5 +1,18 @@
+export const formTitle = 'Write us';
+
+export const inputLabels = {
+  name: 'Name',
+  email: 'Email',
+  message: 'Message',
+};
+
+export const inputIsRequired = {
+  name: false,
+  email: true,
+  message: true,
+};
+
 export const errorMessages = {
-  name: 'Please tell us your name.',
   email: 'Please enter a valid email.',
   message: 'Please tell us how we can help you.',
 };

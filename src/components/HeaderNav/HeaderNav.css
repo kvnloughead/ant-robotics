@@ -72,14 +72,19 @@
   top: 17px;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1120px) {
   .header-nav {
-    width: 87.5vw;
-    margin-left: -43.75vw;
+    max-width: calc(100vw - 60px);
+    margin-left: calc((100vw - 60px)/(-2));
   }
 }
 
 @media screen and (max-width: 767.5px) {
+  .header-nav {
+    max-width: calc(100vw - 40px);
+    margin-left: calc((100vw - 40px)/(-2));
+  }
+
   .header-nav__links {
     width: 87.5vw;
     height: 214px;

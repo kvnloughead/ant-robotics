@@ -1,4 +1,6 @@
-export const cardsWithImages = [
+export const title = 'Customers benefit despite of the automation level';
+
+export const data = [
   {
     image: './images/workplace-images/man-on-pallet-jack.png',
     title: 'Labor-intensive dolly movements',

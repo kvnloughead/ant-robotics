@@ -1,4 +1,6 @@
-export const galleryItems = [
+export const title = 'Gallery';
+
+export const data = [
   {
     image: './images/gallery/gallery-image-1.png',
     text: 'ANT 100 Robot at work',
