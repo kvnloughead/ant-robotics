@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import './Carousel.css';
 import Button from '../Button/Button';
-import Form from '../Form/Form';
 import { data, arrows } from '../../config/products';
 
 export default function Carousel(props) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isFormOpen, setIsFormOpen] = useState(false);
 
   const handleArrowClick = (evt) => {
     const isLeftArrow = evt.currentTarget.classList.contains('carousel-arrow_left');
@@ -15,15 +13,6 @@ export default function Carousel(props) {
       setCurrentIndex(newIndex < 0 ? 0 : newIndex);
     }
   };
-
-  function openForm() {
-    setIsFormOpen(true);
-    Form();
-  }
-
-  function closeForm() {
-    setIsFormOpen(false);
-  }
 
   return (
     <>
@@ -57,9 +46,7 @@ export default function Carousel(props) {
                 label="Get more info"
                 id="carousel"
                 style={{ background: 'black' }}
-                onClick={openForm}
-                isOpen={isFormOpen}
-                onClose={closeForm}
+                onClick={props.onClick}
               />
             </div>
           </li>
