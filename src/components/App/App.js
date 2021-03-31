@@ -103,7 +103,7 @@ function App() {
         lastScroll={lastScroll}
       />
       <Section title={productsConfig.title} type="products" layout="vertical" htmlId={htmlIds.productsId}>
-        <Carousel products={productsConfig.data} type="products" />
+        <Carousel products={productsConfig.data} type="products" onClick={openModal} />
         <SectionContext />
       </Section>
       <Section title={benefitsConfig.title} type="benefits" layout="horizontal" htmlId={htmlIds.benefitsId}>
