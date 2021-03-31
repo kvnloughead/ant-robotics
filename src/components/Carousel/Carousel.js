@@ -47,8 +47,8 @@ export default function Carousel(props) {
               <ul className="carousel-item__specs">
                 {Object.entries(product.specs).map(([category, value]) => (
                   <li className="carousel-item__spec">
-                    <span className="carousel-item__spec-type">{data[currentIndex].specs[category]}</span>
-                    {data[currentIndex].specs[value]}
+                    <span className="carousel-item__spec-type">{category}</span>
+                    {value}
                   </li>
                 ))}
               </ul>
