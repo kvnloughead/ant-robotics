@@ -1,6 +1,7 @@
 import './Button.css';
+import { labelsById as labels } from '../../config/buttons';
 
-function Button({ label, onClick, style, location, isValid = true }) {
+function Button({ id, onClick, style, location, isValid = true }) {
   return (
     <button
       type="button"
@@ -10,7 +11,7 @@ function Button({ label, onClick, style, location, isValid = true }) {
       onClick={onClick}
       style={style}
     >
-      {label}
+      {labels[id]}
     </button>
   );
 }

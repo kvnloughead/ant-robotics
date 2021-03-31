@@ -1,10 +1,11 @@
 import './TextInput.css';
+import { inputIsRequired, inputLabels } from '../../config/form';
 
-function TextInput({ title, type, required, onChange, showErrors, errors, values }) {
+function TextInput({ type, required, onChange, showErrors, errors, values }) {
   return (
     <>
       <label className="text-input-label" htmlFor={type}>
-        {title}
+        {`${inputLabels[type]}${inputIsRequired[type] ? '*' : ''}`}
       </label>
       {type === 'message' ? (
         <textarea
@@ -12,7 +13,7 @@ function TextInput({ title, type, required, onChange, showErrors, errors, values
           type={type}
           id={type}
           name={type}
-          required={required}
+          required={inputIsRequired[type]}
           autoComplete="on"
           onChange={onChange}
           value={values[type] || ''}

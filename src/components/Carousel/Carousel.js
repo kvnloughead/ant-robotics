@@ -42,6 +42,7 @@ export default function Carousel(props) {
               alt="robot product discussed in each card"
               src={products[currentIndex].image}
             />
+
             <div className="carousel-item__details">
               <h3 className="carousel-item__title">{products[currentIndex].title}</h3>
               <ul className="carousel-item__specs">

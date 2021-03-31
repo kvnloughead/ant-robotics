@@ -1,4 +1,6 @@
-export const products = [
+export const title = 'Wide choice of transport robots';
+
+export const data = [
   {
     image: '../../images/products/products_1-otto.svg',
     title: 'OTTO 100 (pending)',
