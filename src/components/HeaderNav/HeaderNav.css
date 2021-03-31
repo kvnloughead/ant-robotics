@@ -80,10 +80,6 @@
 }
 
 @media screen and (max-width: 767.5px) {
-  .header-nav {
-    max-width: calc(100vw - 40px);
-    margin-left: calc((100vw - 40px)/(-2));
-  }
 
   .header-nav__links {
     width: 87.5vw;
