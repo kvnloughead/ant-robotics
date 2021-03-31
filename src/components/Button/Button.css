@@ -27,6 +27,10 @@
   background-color: #808080;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 425px) {
   .button_location_form {
     width: 280px;

@@ -1,10 +1,8 @@
 import { useEffect, useCallback, useState } from 'react';
 import './Form.css';
-
+import { formTitle, errorMessages } from '../../config/form';
 import Button from '../Button/Button';
 import TextInput from '../TextInput/TextInput';
-
-import { errorMessages } from '../../config/form';
 
 function Form({ modalType, isOpen, setIsOpen }) {
   const [values, setValues] = useState({});
@@ -62,7 +60,7 @@ function Form({ modalType, isOpen, setIsOpen }) {
         action="#"
         noValidate
       >
-        <h2 className="form__title">Write us</h2>
+        <h2 className="form__title">{formTitle}</h2>
         <button className="form__close-button clickable" type="button" aria-label="close-modal" onClick={closeModal} />
         <TextInput
           values={values}
@@ -91,7 +89,7 @@ function Form({ modalType, isOpen, setIsOpen }) {
           required
           onChange={handleChange}
         />
-        <Button onClick={(event) => handleSubmit(event, isValid)} label="Submit" location="form" isValid={isValid} />
+        <Button id="submit" onClick={(event) => handleSubmit(event, isValid)} location="form" isValid={isValid} />
       </form>
       <div
         role="button"

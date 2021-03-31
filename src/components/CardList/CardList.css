@@ -7,6 +7,10 @@
   justify-content: space-around;
 }
 
+.card-list_spacing_space-between {
+  justify-content: space-between;
+}
+ 
 @media screen and (max-width: 1279.5px) {
   .card-list {
     display: grid;
@@ -14,6 +18,7 @@
     grid-template-rows: auto auto;
     grid-row-gap: 90px;
     grid-column-gap: 78px;
+    justify-content: space-around;
   }
   
   .card-list_type_team {
