@@ -9,6 +9,7 @@ import Form from '../Form/Form';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Banner from '../Banner/Banner';
+import Preloader from '../Preloader/Preloader';
 import { htmlIds } from '../../config/nav-bar';
 import * as benefitsConfig from '../../config/benefits';
 import * as galleryConfig from '../../config/gallery';
@@ -42,6 +43,7 @@ function App() {
 
   return (
     <>
+      <Preloader />
       <Form isOpen={formIsOpen} setIsOpen={setFormIsOpen} />
       <Header
         windowInnerWidth={windowInnerWidth}
