@@ -2,7 +2,7 @@ export const title = 'Wide choice of transport robots';
 
 export const data = [
   {
-    image: '../../images/products/products_1-otto.svg',
+    image: './images/products/product_1-otto.svg',
     title: 'OTTO 100 (pending)',
     specs: {
       'Max payload: ': '220 lbs (100kg)',
@@ -27,8 +27,8 @@ export const data = [
 ];
 
 export const arrows = {
-  left: '../../images/products/product_carousel-arrow_left.svg',
-  right: '../../images/products/product_carousel-arrow_left.svg',
+  left: './images/products/product_carousel-arrow_left.svg',
+  right: './images/products/product_carousel-arrow_left.svg',
   leftInactive: './images/gallery/left-arrow-inactive.png',
   rightInactive: './images/gallery/left-arrow-inactive.png',
 };
