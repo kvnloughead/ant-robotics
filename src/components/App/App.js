@@ -2,7 +2,6 @@ import './App.css';
 import { useState, useCallback } from 'react';
 import Carousel from '../Carousel/Carousel';
 import Section from '../Section/Section';
-import SectionContext from '../SectionContext/SectionContext';
 import Gallery from '../Gallery/Gallery';
 import CardList from '../CardList/CardList';
 import Form from '../Form/Form';
