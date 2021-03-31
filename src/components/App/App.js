@@ -2,6 +2,7 @@ import './App.css';
 import { useState, useCallback } from 'react';
 import Carousel from '../Carousel/Carousel';
 import Section from '../Section/Section';
+import SectionContext from '../SectionContext/SectionContext';
 import Gallery from '../Gallery/Gallery';
 import CardList from '../CardList/CardList';
 import Form from '../Form/Form';
@@ -103,6 +104,7 @@ function App() {
       />
       <Section title={productsConfig.title} type="products" layout="vertical" htmlId={htmlIds.productsId}>
         <Carousel products={productsConfig.data} type="products" />
+        <SectionContext />
       </Section>
       <Section title={benefitsConfig.title} type="benefits" layout="horizontal" htmlId={htmlIds.benefitsId}>
         <CardList cards={benefitsConfig.data} type="benefits" />
