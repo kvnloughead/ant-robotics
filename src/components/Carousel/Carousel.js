@@ -35,7 +35,7 @@ export default function Carousel(props) {
           onClick={handleArrowClick}
           style={{ backgroundImage: `url(${currentIndex > 0 ? arrows.left : arrows.leftInactive})` }}
         />
-        {props.products.map((product) => (
+        {props.products.slice(currentIndex, currentIndex + 1).map((product) => (
           <li className="carousel-item">
             <img
               className="carousel-item__image"
