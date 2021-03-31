@@ -1,3 +1,5 @@
+import { addUniqueId } from '../utils/helpers';
+
 export const title = 'Wide choice of transport robots';
 
 export const data = [
@@ -32,3 +34,5 @@ export const arrows = {
   leftInactive: './images/gallery/left-arrow-inactive.png',
   rightInactive: './images/gallery/left-arrow-inactive.png',
 };
+
+addUniqueId(data);

@@ -1,3 +1,5 @@
+import { addUniqueId } from '../utils/helpers';
+
 export const brandTitle = 'ANT Robotics';
 
 export const htmlIds = {
@@ -12,27 +14,27 @@ export const htmlIds = {
 
 export const links = [
   {
-    id: htmlIds.productsId,
+    htmlId: htmlIds.productsId,
     title: 'Robots',
   },
   {
-    id: htmlIds.benefitsId,
+    htmlId: htmlIds.benefitsId,
     title: 'Benefits',
   },
   {
-    id: htmlIds.galleryId,
+    htmlId: htmlIds.galleryId,
     title: 'Gallery',
   },
   {
-    id: htmlIds.cardListId,
+    htmlId: htmlIds.cardListId,
     title: 'Will it work for Me?',
   },
   {
-    id: htmlIds.teamId,
+    htmlId: htmlIds.teamId,
     title: 'Team',
   },
   {
-    id: htmlIds.contactsId,
+    htmlId: htmlIds.contactsId,
     title: 'Contact Us',
   },
 ];
@@ -41,3 +43,5 @@ export const darkMenuIcon = './images/header/menu-icon-dark.svg';
 export const lightMenuIcon = './images/header/menu-icon-light.svg';
 export const darkCloseIcon = './images/header/dark-close-icon.svg';
 export const lightCloseIcon = './images/header/light-close-icon.svg';
+
+addUniqueId(links);

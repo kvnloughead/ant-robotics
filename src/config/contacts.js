@@ -1,3 +1,5 @@
+import { addUniqueId } from '../utils/helpers';
+
 export const title = 'Contacts';
 
 export const address = '8000 Edgewater Dr., Oakland, CA 94621, USA';
@@ -25,3 +27,5 @@ export const contacts = [
     value: 'https://www.linkedin.com/company/antrobotics',
   },
 ];
+
+addUniqueId(contacts);
