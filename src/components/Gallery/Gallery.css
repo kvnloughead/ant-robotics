@@ -18,6 +18,11 @@
   margin-bottom: 14px;
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.04);
   border-radius: 6px;
+  transition: linear opacity 1s;
+}
+
+.gallery__image_loading {
+  opacity: .5;
 }
 
 .gallery__text {

@@ -1,15 +1,18 @@
 import { useState } from 'react';
 import './Gallery.css';
+import Preloader from '../Preloader/Preloader';
 import { arrows } from '../../config/gallery';
 
 function Gallery({ items }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleArrowClick = (evt) => {
     const isLeftArrow = evt.currentTarget.classList.contains('arrow-button_left');
     const newIndex = currentIndex + (isLeftArrow ? -1 : 1);
-    if (newIndex <= items.length - 1) {
+    if (newIndex >= 0 && newIndex <= items.length - 1) {
       setCurrentIndex(newIndex < 0 ? 0 : newIndex);
+      setIsLoading(true);
     }
   };
 
@@ -24,7 +27,17 @@ function Gallery({ items }) {
             onClick={handleArrowClick}
             style={{ backgroundImage: `url(${currentIndex > 0 ? arrows.left : arrows.leftInactive})` }}
           />
-          <img className="gallery__image" src={items[currentIndex].image} alt={items[currentIndex].text} />
+          <img
+            className={`gallery__image ${isLoading ? 'gallery__image_loading' : ''}`}
+            src={items[currentIndex].image}
+            alt={items[currentIndex].text}
+            onLoad={() =>
+              setTimeout(() => {
+                setIsLoading(false);
+              }, 200)
+            }
+          />
+          <Preloader isLoading={isLoading} />
           <button
             className="arrow-button arrow-button_right clickable"
             type="button"
