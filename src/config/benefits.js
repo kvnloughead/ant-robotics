@@ -1,3 +1,5 @@
+import { addUniqueId } from '../utils/helpers';
+
 export const title = 'Benefits';
 
 export const data = [
@@ -23,3 +25,5 @@ export const data = [
     text: 'Robots produced by tens of different vendors can collaborate in the same workspace.',
   },
 ];
+
+addUniqueId(data);

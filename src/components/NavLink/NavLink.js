@@ -1,9 +1,9 @@
 import './NavLink.css';
 
-function NavLink({ id, title, isHeaderNavLight }) {
+function NavLink({ htmlId, title, isHeaderNavLight }) {
   return (
     <li className="nav-item">
-      <a className={`nav-link ${isHeaderNavLight ? 'dark-text' : ''}`} href={`#${id}`}>
+      <a className={`nav-link ${isHeaderNavLight ? 'dark-text' : ''}`} href={`#${htmlId}`}>
         {title}
       </a>
     </li>

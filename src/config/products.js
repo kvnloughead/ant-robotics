@@ -1,3 +1,5 @@
+import { addUniqueId } from '../utils/helpers';
+
 export const data = [
   {
     image: './images/products/product_1-otto.svg',
@@ -30,3 +32,5 @@ export const arrows = {
   leftInactive: './images/gallery/left-arrow-inactive.png',
   rightInactive: './images/gallery/left-arrow-inactive.png',
 };
+
+addUniqueId(data);

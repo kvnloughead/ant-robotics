@@ -25,7 +25,7 @@ export default function Carousel(props) {
           style={{ backgroundImage: `url(${currentIndex > 0 ? arrows.left : arrows.leftInactive})` }}
         />
         {props.products.slice(currentIndex, currentIndex + 1).map((product) => (
-          <li className="carousel-item">
+          <li key={product.id} className="carousel-item">
             <img
               className="carousel-item__image"
               alt="robot product discussed in each card"

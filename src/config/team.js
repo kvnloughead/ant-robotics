@@ -1,3 +1,5 @@
+import { addUniqueId } from '../utils/helpers';
+
 export const title = 'Team';
 
 export const data = [
@@ -26,3 +28,5 @@ export const data = [
     image: './images/team/max.png',
   },
 ];
+
+addUniqueId(data);
