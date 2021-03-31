@@ -25,4 +25,10 @@ export const data = [
     text:
       '<b>Challenges</b>: Limited upgrade options within the same vendor robot line only and too expensive to use another vendor robots.',
   },
+  {
+    image: './images/workplace-images/autonomous-robots.png',
+    title: 'Autonomous mobile robots ',
+    text:
+      '<b>Challenges</b>: Limited upgrade options within the same vendor robot line only and too expensive to use another vendor robots.',
+  },
 ];
