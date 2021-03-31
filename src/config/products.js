@@ -1,5 +1,3 @@
-export const title = 'Wide choice of transport robots';
-
 export const data = [
   {
     image: './images/products/product_1-otto.svg',
