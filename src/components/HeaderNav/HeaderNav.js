@@ -7,9 +7,11 @@ import { screenSizes, lightModeStart } from '../../utils/constants';
 
 function HeaderNav({ windowInnerWidth, onResize, isMobileMenuOpen, onMenuIconClick, windowScrollY, onScrollY }) {
   const [isScrolling, setIsScrolling] = useState(false);
+
   useEffect(() => {
     window.addEventListener('resize', onResize);
   });
+
   useEffect(() => {
     let scrollingTimer;
     window.addEventListener(
@@ -35,14 +37,38 @@ function HeaderNav({ windowInnerWidth, onResize, isMobileMenuOpen, onMenuIconCli
       <a className={`header-nav__brand ${isHeaderNavLight ? 'dark-text' : ''}`} href="/">
         {brandTitle}
       </a>
-      {(!isMobile || isMobileMenuOpen) && (
+      {/* <ul
+        className={`header-nav__links ${isHeaderNavLight ? 'header-nav__links_theme_light' : ''}  ${
+          isMobileMenuOpen ? 'header-nav__links_mobile-menu' : ''
+        }
+            }`}
+      >
+        {links.map((link) => (
+          <NavLink htmlId={link.htmlId} title={link.title} key={link.id} isHeaderNavLight={isHeaderNavLight} />
+        ))}
+      </ul> */}
+      {!isMobile ? (
         <>
-          <ul className={`header-nav__links ${isHeaderNavLight ? 'header-nav__links_theme_light' : ''}`}>
+          <ul
+            className={`header-nav__links ${isHeaderNavLight ? 'header-nav__links_theme_light' : ''} ${
+              isMobileMenuOpen ? 'header-nav__links_mobile-menu' : ''
+            }`}
+          >
             {links.map((link) => (
               <NavLink htmlId={link.htmlId} title={link.title} key={link.id} isHeaderNavLight={isHeaderNavLight} />
             ))}
           </ul>
         </>
+      ) : (
+        <ul
+          className={`header-nav__links ${isHeaderNavLight ? 'header-nav__links_theme_light' : ''} ${
+            isMobileMenuOpen ? 'header-nav__links_mobile-menu' : ''
+          }`}
+        >
+          {links.map((link) => (
+            <NavLink htmlId={link.htmlId} title={link.title} key={link.id} isHeaderNavLight={isHeaderNavLight} />
+          ))}
+        </ul>
       )}
       <a
         className={`header-nav__social ${isMobile ? 'header-nav__social_mobile' : ''} ${
