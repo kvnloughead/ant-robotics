@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './Carousel.css';
 import Button from '../Button/Button';
 import Form from '../Form/Form';
-import { products, arrows } from '../../config/products';
+import { data, arrows } from '../../config/products';
 
 export default function Carousel(props) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -11,7 +11,7 @@ export default function Carousel(props) {
   const handleArrowClick = (evt) => {
     const isLeftArrow = evt.currentTarget.classList.contains('carousel-arrow_left');
     const newIndex = currentIndex + (isLeftArrow ? -1 : 1);
-    if (newIndex <= products.length - 1) {
+    if (newIndex <= data.length - 1) {
       setCurrentIndex(newIndex < 0 ? 0 : newIndex);
     }
   };
@@ -40,15 +40,15 @@ export default function Carousel(props) {
             <img
               className="carousel-item__image"
               alt="robot product discussed in each card"
-              src={products[currentIndex].image}
+              src={data[currentIndex].image}
             />
             <div className="carousel-item__details">
-              <h3 className="carousel-item__title">{products[currentIndex].title}</h3>
+              <h3 className="carousel-item__title">{data[currentIndex].title}</h3>
               <ul className="carousel-item__specs">
-                {Object.entries(product.data).map(([category, value]) => (
+                {Object.entries(product.specs).map(([category, value]) => (
                   <li className="carousel-item__spec">
-                    <span className="carousel-item__spec-type">{products[currentIndex].data[category]}</span>
-                    {products[currentIndex].data[value]}
+                    <span className="carousel-item__spec-type">{data[currentIndex].specs[category]}</span>
+                    {data[currentIndex].specs[value]}
                   </li>
                 ))}
               </ul>
@@ -70,7 +70,7 @@ export default function Carousel(props) {
           alt="right slider arrow"
           onClick={handleArrowClick}
           style={{
-            backgroundImage: `url(${currentIndex < products.length - 1 ? arrows.right : arrows.rightInactive})`,
+            backgroundImage: `url(${currentIndex < data.length - 1 ? arrows.right : arrows.rightInactive})`,
           }}
         />
       </ul>

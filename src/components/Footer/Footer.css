@@ -1,7 +1,7 @@
 .footer {
     background-color: #f9f9f9;
     border-radius: 14px;
-    padding: 94px 100px 91px 100px;
+    padding: 110px 100px 110px 100px;
     margin: 10px;
     box-sizing: content-box;
 }
@@ -48,7 +48,7 @@
 
 .footer__map {
     min-width: 560px;
-    height: 465px;
+    height: 430px;
     margin-top: -43px;
     overflow: hidden;
     box-sizing: border-box;
@@ -65,7 +65,7 @@
 
 @media screen and (max-width: 1200px) {
     .footer {
-      padding: 110px 21px 120px 24px;
+      padding: 110px 40px 120px 40px;
     }
 
     .footer__columns {
@@ -74,12 +74,12 @@
 
     .footer__map {
         margin: 0 auto;
-        margin-top: 44px;
+        margin-top: 60px;
         min-width: 280px;
     }
 
     .footer__copyright {
-        margin-top: 21px;
+        margin-top: 40px;
     }
 }
 

@@ -1,8 +1,10 @@
-export const products = [
+export const title = 'Wide choice of transport robots';
+
+export const data = [
   {
     image: '../../images/products/products_1-otto.svg',
     title: 'OTTO 100 (pending)',
-    data: {
+    specs: {
       'Max payload: ': '220 lbs (100kg)',
       'Size: ': '740 x 550 x 310 mm',
       'Max speed: ': '4.3 mph',
@@ -14,7 +16,7 @@ export const products = [
     image:
       'https://images.unsplash.com/photo-1546776310-eef45dd6d63c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1339&q=80',
     title: 'Placeholder',
-    data: {
+    specs: {
       'Max payload: ': 'Placeholder',
       'Size: ': 'Placeholder',
       'Max speed: ': 'Placeholder',
