@@ -1,4 +1,5 @@
 export const formTitle = 'Write us';
+export const closeIcon = './images/black-close-icon.svg';
 
 export const inputLabels = {
   name: 'Name',
