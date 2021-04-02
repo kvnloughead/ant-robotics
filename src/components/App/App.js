@@ -15,6 +15,7 @@ import * as galleryConfig from '../../config/gallery';
 import * as teamConfig from '../../config/team';
 import * as cardsWithImagesConfig from '../../config/cards-with-images';
 import * as productsConfig from '../../config/products';
+import * as robotFactsConfig from '../../config/robot-facts';
 
 function App() {
   const [windowInnerWidth, setWindowInnerWidth] = useState(window.innerWidth);
@@ -52,9 +53,9 @@ function App() {
         onScrollY={handleScrollY}
         lastScroll={lastScroll}
       />
-      <Section title={productsConfig.title} type="products" layout="vertical" htmlId={htmlIds.productsId}>
+      <Section title={robotFactsConfig.title} type="products" layout="vertical" htmlId={htmlIds.productsId}>
         <Carousel products={productsConfig.data} type="products" onClick={openModal} />
-        <SectionContext />
+        <SectionContext facts={robotFactsConfig.data} />
       </Section>
       <Section title={benefitsConfig.title} type="benefits" layout="horizontal" htmlId={htmlIds.benefitsId}>
         <CardList cards={benefitsConfig.data} type="benefits" />

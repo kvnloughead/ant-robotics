@@ -39,6 +39,7 @@
   padding: 0;
   gap: 14px;
   background: transparent;
+  /* visibility: hidden; */
 }
 
 .header-nav__social {
@@ -98,6 +99,15 @@
     padding: 20px 0 20px 0;
     box-sizing: content-box;
     gap: 18px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear .5s, opacity .5s linear;
+  }
+
+  .header-nav__links_mobile-menu {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
   }
 
   .header-nav__links_theme_light {
