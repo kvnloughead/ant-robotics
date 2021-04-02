@@ -119,6 +119,22 @@
     max-width: 280px;
   }
 
+  .card_type_benefits {
+    margin-bottom: 40px;
+  }
+
+  .card_type_cards-with-images {
+    margin-bottom: 70px;
+  }
+
+  .card_type_team {
+    margin-bottom: 50px;
+  }
+
+  .card:last-of-type {
+    margin-bottom: 0;
+  }
+
   .card__image {
     margin: auto;
   }
