@@ -1,16 +1,19 @@
 import { useState } from 'react';
 import './Carousel.css';
+import Preloader from '../Preloader/Preloader';
 import Button from '../Button/Button';
 import { data, arrows } from '../../config/products';
 
 export default function Carousel(props) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleArrowClick = (evt) => {
     const isLeftArrow = evt.currentTarget.classList.contains('carousel-arrow_left');
     const newIndex = currentIndex + (isLeftArrow ? -1 : 1);
     if (newIndex <= data.length - 1) {
       setCurrentIndex(newIndex < 0 ? 0 : newIndex);
+      setIsLoading(true);
     }
   };
 
@@ -24,12 +27,18 @@ export default function Carousel(props) {
           onClick={handleArrowClick}
           style={{ backgroundImage: `url(${currentIndex > 0 ? arrows.left : arrows.leftInactive})` }}
         />
+        <Preloader isLoading={isLoading} location="carousel" />
         {props.products.slice(currentIndex, currentIndex + 1).map((product) => (
           <li key={product.id} className="carousel-item">
             <img
               className="carousel-item__image"
               alt="robot product discussed in each card"
               src={data[currentIndex].image}
+              onLoad={() =>
+                setTimeout(() => {
+                  setIsLoading(false);
+                }, 200)
+              }
             />
             <div className="carousel-item__details">
               <h3 className="carousel-item__title">{data[currentIndex].title}</h3>
