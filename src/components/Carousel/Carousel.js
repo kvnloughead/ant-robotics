@@ -35,7 +35,7 @@ export default function Carousel(props) {
               <h3 className="carousel-item__title">{data[currentIndex].title}</h3>
               <ul className="carousel-item__specs">
                 {Object.entries(product.specs).map(([category, value]) => (
-                  <li className="carousel-item__spec">
+                  <li key={`${product.id}${category}${value}`} className="carousel-item__spec">
                     <span className="carousel-item__spec-type">{category}</span>
                     {value}
                   </li>
