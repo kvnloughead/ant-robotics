@@ -31,6 +31,10 @@
   cursor: pointer;
 }
 
+.button:focus {
+  outline: #FAA805 1px dotted;
+}
+
 @media screen and (max-width: 425px) {
   .button_location_form {
     width: 280px;

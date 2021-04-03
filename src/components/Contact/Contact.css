@@ -16,6 +16,10 @@
     color: #000000;
 }
 
+.contact__link:focus {
+    outline: #FAA805 1px dotted;
+}
+
 @media screen and (max-width: 500px) {
     .contact:first-child {
         margin-top: 40px;

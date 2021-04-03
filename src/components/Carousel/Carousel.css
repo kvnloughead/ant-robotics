@@ -16,12 +16,16 @@
     height: 14px;
     align-items: center;
     border: none;
-    outline: none;
+    /* outline: none; */
     background: transparent;
 }
 
 .carousel-arrow:hover {
     cursor: pointer;
+}
+
+.carousel-arrow:focus {
+    outline: #FAA805 1px dotted;
 }
 
 .carousel-arrow_left {

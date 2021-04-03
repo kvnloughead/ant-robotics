@@ -1,3 +1,11 @@
+.nav-item {
+    margin-right: 14px;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
 .nav-link {
     text-decoration: none;
     color: #fff;
@@ -10,4 +18,18 @@
     margin: 0;
     padding: 0;
     vertical-align: super;
+}
+
+.nav-link:focus {
+    outline: #FAA805 1px dotted;
+}
+
+@media screen and (max-width: 767.5px) {
+    .nav-item {
+        margin-right: 0;
+        margin-bottom: 18px;
+    }
+    .nav-item:last-child {
+        margin-bottom: 0;
+    }
 }

@@ -46,6 +46,10 @@
   padding: 0;
 }
 
+.form__close-button:focus {
+  outline: #FAA805 1px dotted;
+}
+
 .form__submit-button {
   align-self: center;
 }

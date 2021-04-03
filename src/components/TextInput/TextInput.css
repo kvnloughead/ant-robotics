@@ -17,6 +17,10 @@
   padding: 14px 13px;
 }
 
+.text-input:focus {
+  outline: #FAA805 1px dotted;
+}
+
 .text-input_type_text-area {
   height: 100px;
   resize: none;

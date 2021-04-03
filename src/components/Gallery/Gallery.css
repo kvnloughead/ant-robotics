@@ -37,6 +37,10 @@
   border-radius: 6px;
 }
 
+.arrow-button:focus {
+  outline: #FAA805 1px dotted;
+}
+
 .arrow-button_left {
   padding: 0;
   margin-right: 30px;

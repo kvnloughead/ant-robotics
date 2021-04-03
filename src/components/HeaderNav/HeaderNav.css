@@ -32,12 +32,15 @@
   left: 20px;
 }
 
+.header-nav__brand:focus {
+  outline: #FAA805 1px dotted;
+}
+
 .header-nav__links {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 14px;
   background: transparent;
   /* visibility: hidden; */
 }
@@ -58,6 +61,10 @@
   height: 14px;
 }
 
+.header-nav__social:focus {
+  outline: #FAA805 1px dotted;
+}
+
 .header-nav__social_mobile {
   right: 56px;
 }
@@ -71,6 +78,10 @@
   position: absolute;
   right: 20px;
   top: 17px;
+}
+
+.header-nav__open-menu-button:focus {
+  outline: #FAA805 1px dotted;
 }
 
 @media screen and (max-width: 1120px) {
@@ -98,7 +109,7 @@
     top: 58px;
     padding: 20px 0 20px 0;
     box-sizing: content-box;
-    gap: 18px;
+    /* gap: 18px; */
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s linear .5s, opacity .5s linear;
