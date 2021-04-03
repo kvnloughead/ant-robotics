@@ -18,41 +18,16 @@ import * as productsConfig from '../../config/products';
 import * as robotFactsConfig from '../../config/robot-facts';
 
 function App() {
-  const [windowInnerWidth, setWindowInnerWidth] = useState(window.innerWidth);
-  const [windowScrollY, setWindowScrollY] = useState(window.scrollY);
-  const [lastScroll] = useState(new Date());
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [formIsOpen, setFormIsOpen] = useState(false);
 
   const openModal = () => {
     setFormIsOpen(true);
   };
 
-  const handleResize = () => {
-    setWindowInnerWidth(window.innerWidth);
-  };
-
-  const handleScrollY = () => {
-    setWindowScrollY(window.scrollY);
-    setIsMobileMenuOpen(false);
-  };
-
-  const handleMenuIconClick = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
   return (
     <>
       <Form isOpen={formIsOpen} setIsOpen={setFormIsOpen} />
-      <Header
-        windowInnerWidth={windowInnerWidth}
-        onResize={handleResize}
-        isMobileMenuOpen={isMobileMenuOpen}
-        onMenuIconClick={handleMenuIconClick}
-        windowScrollY={windowScrollY}
-        onScrollY={handleScrollY}
-        lastScroll={lastScroll}
-      />
+      <Header />
       <Section title={robotFactsConfig.title} type="products" layout="vertical" htmlId={htmlIds.productsId}>
         <Carousel products={productsConfig.data} type="products" onClick={openModal} />
         <SectionContext facts={robotFactsConfig.data} />
