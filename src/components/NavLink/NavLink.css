@@ -21,7 +21,7 @@
 }
 
 .nav-link:focus {
-    outline: #FAA805 1px dotted;
+    outline: #FFF 1px solid;
 }
 
 @media screen and (max-width: 767.5px) {

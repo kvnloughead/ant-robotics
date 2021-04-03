@@ -47,7 +47,7 @@
 }
 
 .form__close-button:focus {
-  outline: #FAA805 1px dotted;
+  outline: #242424 1px solid;
 }
 
 .form__submit-button {

@@ -38,7 +38,8 @@
 }
 
 .arrow-button:focus {
-  outline: #FAA805 1px dotted;
+  outline: none;
+  box-shadow: 0 0 0 1pt #242424;
 }
 
 .arrow-button_left {

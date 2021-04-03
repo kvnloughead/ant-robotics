@@ -43,6 +43,7 @@ export default function Carousel(props) {
               </ul>
               <Button
                 className="carousel-item__button"
+                location="carousel"
                 id="carousel"
                 style={{ background: 'black' }}
                 onClick={props.onClick}

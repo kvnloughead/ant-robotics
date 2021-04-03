@@ -16,7 +16,6 @@
     height: 14px;
     align-items: center;
     border: none;
-    /* outline: none; */
     background: transparent;
 }
 
@@ -25,7 +24,8 @@
 }
 
 .carousel-arrow:focus {
-    outline: #FAA805 1px dotted;
+    outline: none;
+    box-shadow: 0 0 0 1pt #242424;
 }
 
 .carousel-arrow_left {

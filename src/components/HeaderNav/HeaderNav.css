@@ -33,7 +33,7 @@
 }
 
 .header-nav__brand:focus {
-  outline: #FAA805 1px dotted;
+  outline: #FFF 1px solid;
 }
 
 .header-nav__links {
@@ -42,7 +42,6 @@
   margin: 0;
   padding: 0;
   background: transparent;
-  /* visibility: hidden; */
 }
 
 .header-nav__social {
@@ -62,7 +61,7 @@
 }
 
 .header-nav__social:focus {
-  outline: #FAA805 1px dotted;
+  outline: #FFF 1px solid;
 }
 
 .header-nav__social_mobile {
@@ -81,7 +80,7 @@
 }
 
 .header-nav__open-menu-button:focus {
-  outline: #FAA805 1px dotted;
+  outline: #FFF 1px solid;
 }
 
 @media screen and (max-width: 1120px) {

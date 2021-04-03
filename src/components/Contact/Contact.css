@@ -17,7 +17,7 @@
 }
 
 .contact__link:focus {
-    outline: #FAA805 1px dotted;
+    outline: #242424 1px solid;
 }
 
 @media screen and (max-width: 500px) {

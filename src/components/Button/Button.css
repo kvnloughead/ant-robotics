@@ -32,7 +32,23 @@
 }
 
 .button:focus {
-  outline: #FAA805 1px dotted;
+  outline: none;
+  box-shadow: 0 0 4pt 2pt #fff;
+}
+
+.button_location_carousel:focus {
+  outline: none;
+  box-shadow: 0 0 4pt 2pt #242424;
+}
+
+.button_location_banner:focus {
+  outline: none;
+  box-shadow: 0 0 0 1pt #242424;
+}
+
+.button_location_form:focus { 
+  outline: none;
+  box-shadow: 0 0 4pt 2pt #242424;
 }
 
 @media screen and (max-width: 425px) {
