@@ -4,20 +4,10 @@ import Button from '../Button/Button';
 import HeaderNav from '../HeaderNav/HeaderNav';
 import { htmlIds } from '../../config/nav-bar';
 
-function Header({
-  lastScroll,
-  windowInnerWidth,
-  onResize,
-  isMobileMenuOpen,
-  onMenuIconClick,
-  windowScrollY,
-  onScrollY,
-}) {
+function Header({ lastScroll, isMobileMenuOpen, onMenuIconClick, windowScrollY, onScrollY }) {
   return (
     <header className="header" id={htmlIds.brandId}>
       <HeaderNav
-        windowInnerWidth={windowInnerWidth}
-        onResize={onResize}
         isMobileMenuOpen={isMobileMenuOpen}
         onMenuIconClick={onMenuIconClick}
         windowScrollY={windowScrollY}
