@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import Swipe from 'react-easy-swipe';
 import './Gallery.css';
+import Preloader from '../Preloader/Preloader';
 import { arrows } from '../../config/gallery';
 
 function Gallery({ items }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleArrowClick = (evt, isLeft) => {
     if (evt.currentTarget) {
@@ -12,8 +14,9 @@ function Gallery({ items }) {
       isLeft = evt.currentTarget.classList.contains('arrow-button_left');
     }
     const newIndex = currentIndex + (isLeft ? -1 : 1);
-    if (newIndex <= items.length - 1) {
+    if (newIndex >= 0 && newIndex <= items.length - 1) {
       setCurrentIndex(newIndex < 0 ? 0 : newIndex);
+      setIsLoading(true);
     }
     return true;
   };
@@ -34,9 +37,18 @@ function Gallery({ items }) {
             onSwipeLeft={(evt) => handleArrowClick(evt, true)}
             onSwipeMove={() => true}
           >
-            <img className="gallery__image" src={items[currentIndex].image} alt={items[currentIndex].text} />
+            <img
+              className={`gallery__image ${isLoading ? 'gallery__image_loading' : ''}`}
+              src={items[currentIndex].image}
+              alt={items[currentIndex].text}
+              onLoad={() =>
+                setTimeout(() => {
+                  setIsLoading(false);
+                }, 200)
+              }
+            />
           </Swipe>
-
+          <Preloader isLoading={isLoading} />
           <button
             className="arrow-button arrow-button_right clickable"
             type="button"

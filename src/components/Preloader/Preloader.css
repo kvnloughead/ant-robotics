@@ -1,0 +1,50 @@
+.preloader {
+  background-color: #f9f9f9;
+  display: flex;
+  animation: fade-in 1s linear forwards;
+  position: relative;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+.preloader_location_carousel .preloader__orbit {
+  left: -10px;
+}
+
+.preloader_visible {
+  visibility: visible;
+}
+
+.preloader__orbit {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  border-radius: 50%;
+  border: 2px solid #242424;
+  position: relative;
+}
+
+.preloader__planet {
+  width: 12px;
+  height: 12px;
+  background-color: #FAA805;
+  position: absolute;
+  top: 19px;
+  left: 19px;
+  animation: orbit 2s linear infinite;
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(26px); }
+  to   { transform: rotate(360deg) translateX(26px); }
+}
+
+@keyframes fade-in {
+  from { opacity: .3; }
+  to { opacity: .5; }
+}
