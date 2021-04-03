@@ -1,6 +1,6 @@
 import { useEffect, useCallback, useState } from 'react';
 import './Form.css';
-import { formTitle, errorMessages } from '../../config/form';
+import { formTitle, errorMessages, closeIcon } from '../../config/form';
 import Button from '../Button/Button';
 import TextInput from '../TextInput/TextInput';
 
@@ -61,7 +61,13 @@ function Form({ modalType, isOpen, setIsOpen }) {
         noValidate
       >
         <h2 className="form__title">{formTitle}</h2>
-        <button className="form__close-button clickable" type="button" aria-label="close-modal" onClick={closeModal} />
+        <button
+          className="form__close-button clickable"
+          type="button"
+          aria-label="close-modal"
+          onClick={closeModal}
+          style={{ backgroundImage: `url(${closeIcon})` }}
+        />
         <TextInput
           values={values}
           errors={errors}

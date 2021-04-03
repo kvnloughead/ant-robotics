@@ -1,4 +1,8 @@
-This project is configurable via a collection of JavaScript files found in the [/src/config/](./src/config/) directory. Here is a detailed list of all configurable features, with links to the relevant config files. 
+This project is configurable via a collection of JavaScript files found in the [src/config/](./src/config/) directory. 
+
+All images for the site are stored in [public/images/](./public/images). To change images or add additional images you simply store the new image in that directory and write its filepath in the appropriate config location. Make sure that this filepath __is written relative to the public directory.__ So, it should be of the form `./images/rest-of-path-to-image`.
+
+Here is a detailed list of all configurable features, with links to the relevant config files. 
 
 - All section titles: [section-titles.js](src/config/section-titles.js)
 - All text labels for buttons, (keyed to the `id` prop of the `Button` as key: [button.js](src/config/button.js)
