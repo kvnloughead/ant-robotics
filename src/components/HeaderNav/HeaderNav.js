@@ -1,7 +1,15 @@
 import { useEffect, useState } from 'react';
 import './HeaderNav.css';
 import NavLink from '../NavLink/NavLink';
-import { links, brandTitle, darkMenuIcon, lightMenuIcon, darkCloseIcon, lightCloseIcon } from '../../config/nav-bar';
+import {
+  links,
+  brandTitle,
+  htmlIds,
+  darkMenuIcon,
+  lightMenuIcon,
+  darkCloseIcon,
+  lightCloseIcon,
+} from '../../config/nav-bar';
 import { linkedIn } from '../../config/contacts';
 import { screenSizes, lightModeStart } from '../../utils/constants';
 
@@ -50,7 +58,7 @@ function HeaderNav() {
   const currentMenuIcon = isHeaderNavLight ? darkMenuIcon : lightMenuIcon;
   return (
     <nav className={`header-nav ${isHeaderNavLight ? 'header-nav_theme_light' : ''} ${isScrolling ? 'opacity' : ''}`}>
-      <a className={`header-nav__brand ${isHeaderNavLight ? 'dark-text' : ''}`} href="/">
+      <a className={`header-nav__brand ${isHeaderNavLight ? 'dark-text' : ''}`} href={`#${htmlIds.brandId}`}>
         {brandTitle}
       </a>
       {!isMobile ? (
