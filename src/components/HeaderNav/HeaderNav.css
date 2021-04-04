@@ -97,7 +97,7 @@
   }
 
   .header-nav__links {
-    width: 87.5vw;
+    width: calc(100vw - 40px);
     height: 214px;
     flex-direction: column;
     background: #393939;

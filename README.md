@@ -17,7 +17,7 @@ Jessica Perelman
 - [OpenStreetMap](https://www.openstreetmap.org/#map=4/38.01/-95.84) via [react-leaflet](https://react-leaflet.js.org/) for location
 - Responsive based on multiple breakpoints
 - Configurability for easy client updates.  
-  - See config-readme.md for details.
+  - See [config-readme.md](config-readme.md) for details.
 
 Check out our [Trello Board](https://trello.com/b/CPA5Lprq/antrobotics) for the full breakdown!
 
