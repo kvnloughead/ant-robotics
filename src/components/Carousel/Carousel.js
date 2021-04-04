@@ -66,23 +66,6 @@ export default function Carousel(props) {
                   style={{ background: 'black' }}
                   onClick={props.onClick}
                 />
-                <div className="carousel-item__details">
-                  <h3 className="carousel-item__title">{data[currentIndex].title}</h3>
-                  <ul className="carousel-item__specs">
-                    {Object.entries(product.specs).map(([category, value]) => (
-                      <li key={`${product.id}${category}${value}`} className="carousel-item__spec">
-                        <span className="carousel-item__spec-type">{category}</span>
-                        {value}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button
-                    className="carousel-item__button"
-                    id="carousel"
-                    style={{ background: 'black' }}
-                    onClick={props.onClick}
-                  />
-                </div>
               </div>
             </li>
           </Swipe>
