@@ -24,7 +24,6 @@ export const data = [
       'Charging time: ': 'Placeholder',
       'Lost time: ': 'Placeholder',
       'Time after time: ': 'Placeholder',
-      'One more time: ': 'Placeholder',
     },
   },
 ];

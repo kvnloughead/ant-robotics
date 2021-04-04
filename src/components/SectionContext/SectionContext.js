@@ -7,7 +7,7 @@ export default function SectionContext() {
       <p className="section-context__subheading">{summary}</p>
       <ul className="section-context__list">
         {bulletPoints.map((point) => (
-          <li className="section-context__list-item">
+          <li key={point.id} className="section-context__list-item">
             <img
               className="section-context__list-img"
               alt="checkmark"
