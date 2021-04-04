@@ -1,5 +1,5 @@
 import './SectionContext.css';
-import { summary, bulletPoints } from '../../config/robot-facts';
+import { summary, bulletPoints, checkmark } from '../../config/robot-facts';
 
 export default function SectionContext() {
   return (
@@ -8,11 +8,7 @@ export default function SectionContext() {
       <ul className="section-context__list">
         {bulletPoints.map((point) => (
           <li key={point.id} className="section-context__list-item">
-            <img
-              className="section-context__list-img"
-              alt="checkmark"
-              src="../../images/products/product_context-checkmark.svg"
-            />
+            <img className="section-context__list-img" alt="checkmark" src={checkmark} />
             <span className="section-context__list-text">{point}</span>
           </li>
         ))}
