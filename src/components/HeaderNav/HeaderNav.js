@@ -5,11 +5,27 @@ import { links, brandTitle, darkMenuIcon, lightMenuIcon, darkCloseIcon, lightClo
 import { linkedIn } from '../../config/contacts';
 import { screenSizes, lightModeStart } from '../../utils/constants';
 
-function HeaderNav({ windowInnerWidth, onResize, isMobileMenuOpen, onMenuIconClick, windowScrollY, onScrollY }) {
+function HeaderNav() {
   const [isScrolling, setIsScrolling] = useState(false);
+  const [windowInnerWidth, setWindowInnerWidth] = useState(window.innerWidth);
+  const [windowScrollY, setWindowScrollY] = useState(window.scrollY);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleScrollY = () => {
+    setWindowScrollY(window.scrollY);
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleResize = () => {
+    setWindowInnerWidth(window.innerWidth);
+  };
+
+  const handleMenuIconClick = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   useEffect(() => {
-    window.addEventListener('resize', onResize);
+    window.addEventListener('resize', handleResize);
   });
 
   useEffect(() => {
@@ -18,7 +34,7 @@ function HeaderNav({ windowInnerWidth, onResize, isMobileMenuOpen, onMenuIconCli
       'scroll',
       () => {
         setIsScrolling(true);
-        onScrollY();
+        handleScrollY();
         window.clearTimeout(scrollingTimer);
         scrollingTimer = setTimeout(() => {
           setIsScrolling(false);
@@ -37,16 +53,6 @@ function HeaderNav({ windowInnerWidth, onResize, isMobileMenuOpen, onMenuIconCli
       <a className={`header-nav__brand ${isHeaderNavLight ? 'dark-text' : ''}`} href="/">
         {brandTitle}
       </a>
-      {/* <ul
-        className={`header-nav__links ${isHeaderNavLight ? 'header-nav__links_theme_light' : ''}  ${
-          isMobileMenuOpen ? 'header-nav__links_mobile-menu' : ''
-        }
-            }`}
-      >
-        {links.map((link) => (
-          <NavLink htmlId={link.htmlId} title={link.title} key={link.id} isHeaderNavLight={isHeaderNavLight} />
-        ))}
-      </ul> */}
       {!isMobile ? (
         <>
           <ul
@@ -84,7 +90,7 @@ function HeaderNav({ windowInnerWidth, onResize, isMobileMenuOpen, onMenuIconCli
           aria-label="open-or-close-mobile-menu"
           className="header-nav__open-menu-button"
           style={{ backgroundImage: `url(${isMobileMenuOpen ? currentCloseIcon : currentMenuIcon})` }}
-          onClick={onMenuIconClick}
+          onClick={handleMenuIconClick}
         />
       )}
     </nav>
