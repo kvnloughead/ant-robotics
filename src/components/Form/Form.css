@@ -45,6 +45,10 @@
   padding: 0;
 }
 
+.form__close-button:focus {
+  outline: #242424 1px solid;
+}
+
 .form__submit-button {
   align-self: center;
 }

@@ -17,6 +17,11 @@
   padding: 14px 13px;
 }
 
+.text-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 1pt #242424;
+}
+
 .text-input_type_text-area {
   height: 100px;
   resize: none;
