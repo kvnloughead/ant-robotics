@@ -30,7 +30,7 @@ function App() {
       <Header />
       <Section title={robotFactsConfig.title} type="products" layout="vertical" htmlId={htmlIds.productsId}>
         <Carousel products={productsConfig.data} type="products" onClick={openModal} />
-        <SectionContext facts={robotFactsConfig.data} />
+        <SectionContext />
       </Section>
       <Section title={benefitsConfig.title} type="benefits" layout="horizontal" htmlId={htmlIds.benefitsId}>
         <CardList cards={benefitsConfig.data} type="benefits" />
