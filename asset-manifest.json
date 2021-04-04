@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ant-robotics/static/css/main.fce240f2.chunk.css",
+    "main.css": "/ant-robotics/static/css/main.838d44d9.chunk.css",
     "main.js": "/ant-robotics/static/js/main.fa4d258c.chunk.js",
     "main.js.map": "/ant-robotics/static/js/main.fa4d258c.chunk.js.map",
     "runtime-main.js": "/ant-robotics/static/js/runtime-main.3cf98a27.js",
@@ -10,14 +10,14 @@
     "static/js/3.ee6bee0d.chunk.js": "/ant-robotics/static/js/3.ee6bee0d.chunk.js",
     "static/js/3.ee6bee0d.chunk.js.map": "/ant-robotics/static/js/3.ee6bee0d.chunk.js.map",
     "index.html": "/ant-robotics/index.html",
-    "static/css/main.fce240f2.chunk.css.map": "/ant-robotics/static/css/main.fce240f2.chunk.css.map",
+    "static/css/main.838d44d9.chunk.css.map": "/ant-robotics/static/css/main.838d44d9.chunk.css.map",
     "static/js/2.ecaa1d60.chunk.js.LICENSE.txt": "/ant-robotics/static/js/2.ecaa1d60.chunk.js.LICENSE.txt",
     "static/media/index.css": "/ant-robotics/static/media/Inter-SemiBold.d2e3b0e2.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.3cf98a27.js",
     "static/js/2.ecaa1d60.chunk.js",
-    "static/css/main.fce240f2.chunk.css",
+    "static/css/main.838d44d9.chunk.css",
     "static/js/main.fa4d258c.chunk.js"
   ]
 }
