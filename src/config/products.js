@@ -22,6 +22,9 @@ export const data = [
       'Max speed: ': 'Placeholder',
       'Running time: ': 'Placeholder',
       'Charging time: ': 'Placeholder',
+      'Lost time: ': 'Placeholder',
+      'Time after time: ': 'Placeholder',
+      'One more time: ': 'Placeholder',
     },
   },
 ];
