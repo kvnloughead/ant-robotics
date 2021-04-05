@@ -123,6 +123,7 @@
   }
 
   .section_type_gallery {
+    padding: 110px 44px 92px;
     padding-bottom: 92px;
   }
 
@@ -158,6 +159,12 @@
     top: 514px;
     margin-bottom: 0;
     width: 280px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .section_type_gallery {
+    padding: 50px 12px 92px;
   }
 }
 

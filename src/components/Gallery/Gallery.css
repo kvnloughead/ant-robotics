@@ -73,8 +73,8 @@
 
 @media screen and (max-width: 767px) {
   .gallery__image {
-    width: 100%;
-    height: auto;
+    width: 86vw;
+    height: 42vw;
   }
 }
 
